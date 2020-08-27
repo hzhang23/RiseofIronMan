@@ -1,0 +1,14 @@
+{
+  "Yinsen: I wouldn't do that if I were you": {
+    "description": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest",
+    "Tony Stark: What the hell did you do to me?": "Yinsen: What I did? What I did is to save your life. I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs",
+    "Tony Stark: Go away!": "Game over"
+  },
+
+  "Yinsen: What I did? What I did is to save your life. I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs.": {
+    "description": "Yinsen and Tony sitting by a small fire in a dark cave",
+    "Tony Stark: What is this?": "Yinsen: That is an electromagnet, hooked up to a car battery, and it's keeping the shrapnel from entering your heart.",
+    "Tony Stark: Go away!" : "Game over"
+  }
+}
+
