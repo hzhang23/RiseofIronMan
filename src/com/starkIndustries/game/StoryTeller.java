@@ -40,11 +40,11 @@ public class StoryTeller {
         String voiceOver = thisScene.get("voice over").getAsString();
         String nPC = thisScene.get("NPC").getAsString();
 
-        System.out.println(voiceOver);
+        System.out.print(voiceOver);
         Prompter.promptEnterKey();
         System.out.println(nPC);
         Prompter.promptEnterKey();
-        String answer = Prompter.ask(player.get("voice").getAsString());
+        String answer = Prompter.ask(player.get("voice").getAsString()).toUpperCase();
         String nextScene = player.get("reply").getAsJsonObject().get(answer).getAsString();
         runScript(script,nextScene);
     }
