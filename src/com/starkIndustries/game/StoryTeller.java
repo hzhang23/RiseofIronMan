@@ -42,5 +42,5 @@ public class StoryTeller {
         System.out.println(player.get("voice").getAsString());
     }
 
-    //TODO: write a method to tell Story
+    //TODO: write a method to handle player's choice
 }
