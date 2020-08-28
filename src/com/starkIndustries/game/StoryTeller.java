@@ -40,7 +40,7 @@ public class StoryTeller {
         String voiceOver = thisScene.get("voice over").getAsString();
         String nPC = thisScene.get("NPC").getAsString();
 
-        System.out.println(voiceOver);
+        System.out.print(voiceOver);
         Prompter.promptEnterKey();
         System.out.println(nPC);
         Prompter.promptEnterKey();

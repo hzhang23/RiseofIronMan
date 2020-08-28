@@ -3,7 +3,7 @@
     "voice over": "You are Tony Stark, a billionare that is trapped in a cave by terrorist, you need to stay alive and find a way to escape. there is fire pit in front of you and a person is standing by the fire pit and he is talking",
     "NPC": "Yinsen: I won't move if I were you",
     "Player": {
-        "voice": "what would your reply?  A: What the hell did you do to me?   B: could you help me?",
+        "voice": "what would your reply?  A: could you help me?    B: What the hell did you do to me??",
         "reply": {
         "A": "1",
         "B": "2",
@@ -15,17 +15,88 @@
     "voice over": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest",
     "NPC": "Yinsen: What I did? What I did is to save your life. I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs",
     "Player": {
-      "voice": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Removed it from your body",
+      "voice": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Remove it from your body",
+      "reply": {
+        "A": "3",
+        "B": "2"
+      }
+    }
+  },
+  "2": {
+    "voice over":"In shock to Tony's response, Yinsen turns away from Tony",
+    "NPC":"Yinsen: You know I could be some help to you Tony, you should be more friendly",
+    "Player": {
+      "voice": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Remove it from your body\"",
       "reply": {
         "A": "3",
         "B": "fail"
       }
     }
+
+
   },
   "3": {
+    "voice over": "Dazed and confused you begin to zip up your coat.",
+    "NPC": "Yinsen: That is an electromagnet, hooked up to a car battery, and it's keeping the shrapnel from entering your heart. Hmm? That's right. Smile. We met once, you know, at a technical conference in Bern.",
+    "voice over": "Loud voices sound from the another side of the metal door as they open it.",
+    "NPC": "Yinsen: Come on, stand up. Stand up! Just do as I do. Come on, put your hands up",
+    "Player":{
+      "voice": "You notice the men with guys, the guns belong to you. What do you want to do: A: Stand up;  B: Remain seated \"",
+      "reply": {
+        "A": "4",
+        "B": "fail"
+      }
+    }
+
   },
+  "4": {
+    "NPC": "Solider: Welcome, Tony Stark, the most famous mass murderer in the history of America, you will build a Jericho Missile for us, like the one you demostrated",
+    "NPC": "Yinsen: Tony, you must, they will kill us both",
+    "voice over": "Tony begins to think of a plan, he gazes over to Yinsen,",
+    "Player": {
+      "voice": "What do you want to do: A: Agree to build Jericho Missile;  B: Refuse \"",
+      "reply": {
+        "A":"5",
+        "B": "fail2"
+      }
+    }
+  },
+  "5": {
+    "NPC": "Yinsen: Tony sitting around a small fire in the cave with Tony] I'm sure they're looking for you, Stark. But they will never find you in these mountains. Look, what you just saw, that is your legacy, Stark. Your life's work, in the hands of those murderers. Is that how you want to go out? Is this the last act of defiance of the great Tony Stark? Or are you going to do something about it?",
+    "voice over": "Moving closer to the fire, Tony rubs his chest where the he thinks about his legacy",
+    "Player": {
+      "voice": "What will you do: A: Create a plan with Yinsen to escape B: Give up and build Jerchio missle",
+      "reply": {
+        "A": "6",
+        "B": "fail"
+      }
+    }
+
+  },
+  "6": {
+    "voice over": "Tony and Yinsen sit together by the fire, quietly going over there master plan to escape",
+    "NPC": "Yinsen: Tony this is billant, Do you think you have the right materials?",
+    "Player": {
+      "voice": "Do you beleive you can build a Armored suit with weapons? A: I can build anything, I'm Tony Stark B: This plan will not work",
+      "reply": {
+        "A":"7",
+        "B": "fail3"
+      }
+    }
+  },
+  "7": {
+
+  },
+
   "fail": {
-    "voice over": "you die!"
+    "voice over": "Game over, you have Died!!"
+  },
+  "fail2": {
+    "voice over": "Game over, the soliders have killed you!!"
+  },
+
+  "fail3": {
+    "voice over": "Tony completes missle, Then is killed by enemies, GAMEOVER!!"
   }
 
 }
