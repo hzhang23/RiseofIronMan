@@ -9,7 +9,7 @@ public class Prompter {
         Scanner scan = new Scanner(System.in);
         System.out.println(question);
 
-        String userInput = scan.nextLine().toUpperCase();
+        String userInput = scan.nextLine();
         System.out.println("You answered: " + userInput);
         return userInput;
     }
