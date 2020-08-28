@@ -7,7 +7,7 @@ import java.io.File;
 
 public class PlayerClient {
     public static void main(String[] args) {
-        File path = new File("resources /story.json");
+        File path = new File("resources/story.json");
 
         StoryTeller storyTeller = new StoryTeller();
 
@@ -19,7 +19,7 @@ public class PlayerClient {
                 " tube and tries to pick up a cup on the table beside you, but fail. you notice a man shaving and " +
                 "tries to reach further but is stopped by wires.\n");
 
-        System.out.println(newStory.get("Yinsen: I wouldn't do that if I were you").getAsJsonObject().get("description"));;
+        System.out.println(newStory.get("Yinsen: I wouldn't do that if I were you").getAsJsonObject().get("description"));
 
 
     }
