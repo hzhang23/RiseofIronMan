@@ -1,4 +1,4 @@
-package com.startIndustries.client;
+package com.starkIndustries.client;
 
 import com.google.gson.JsonObject;
 import com.starkIndustries.game.StoryTeller;
