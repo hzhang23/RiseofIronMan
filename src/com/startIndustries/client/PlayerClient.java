@@ -13,6 +13,7 @@ public class PlayerClient {
 
         JsonObject newStory = storyTeller.getStory(path);
 
+
         System.out.println(newStory.get("0").getAsJsonObject().get("voice over").getAsString());
 
 
