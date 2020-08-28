@@ -11,7 +11,11 @@ import java.io.FileReader;
 import java.sql.SQLOutput;
 
 public class StoryTeller {
-    //TODO：write a method to load JSON objects'
+
+
+
+
+    //load JSON objects
     public JsonObject getStory(File path)  {
         JsonElement jsonFile = null;
         try {
@@ -22,6 +26,7 @@ public class StoryTeller {
         return jsonFile.getAsJsonObject();
     }
 
+    //run the script and return userInput to change scene
     public void runScript (JsonObject script, String scene){
         /*
         1. print voice over
@@ -39,8 +44,11 @@ public class StoryTeller {
         Prompter.promptEnterKey();
         System.out.println(nPC);
         Prompter.promptEnterKey();
-        System.out.println(player.get("voice").getAsString());
+        String answer = Prompter.ask(player.get("voice").getAsString());
+        String nextScene = player.get("reply").getAsJsonObject().get(answer).getAsString();
+        runScript(script,nextScene);
     }
 
-    //TODO: write a method to handle player's choice and able to redirect to next scene
+    //TODO: take a string and find the scene to run
+
 }

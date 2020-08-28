@@ -15,7 +15,7 @@
     "voice over": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest",
     "NPC": "Yinsen: What I did? What I did is to save your life. I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs",
     "Player": {
-      "Player voice": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Removed it from your body",
+      "voice": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Removed it from your body",
       "reply": {
         "A": "3",
         "B": "fail"
