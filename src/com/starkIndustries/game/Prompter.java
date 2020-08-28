@@ -13,4 +13,10 @@ public class Prompter {
         System.out.println("You answered: " + userInput);
         return userInput;
     }
+
+    public static void promptEnterKey(){
+        System.out.println("Please press \"ENTER\" to continue....");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
 }
