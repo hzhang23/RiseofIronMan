@@ -30,7 +30,7 @@ public class StoryTeller {
          */
         JsonObject scene = script.get("0").getAsJsonObject();
         String voiceOver = script.get("0").getAsJsonObject().get("voice over").getAsString();
-        String nPC = script.get("")
+        String nPC = script.get("").getsome
 
 
 
