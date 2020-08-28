@@ -4,9 +4,11 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import javax.sound.midi.Soundbank;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.sql.SQLOutput;
 
 public class StoryTeller {
     //TODO：write a method to load JSON objects'
@@ -20,7 +22,7 @@ public class StoryTeller {
         return jsonFile.getAsJsonObject();
     }
 
-    public void runScript (JsonObject script){
+    public void runScript (JsonObject script, String scene){
         /*
         1. print voice over
         2. print NPC
@@ -28,14 +30,17 @@ public class StoryTeller {
         4. take user prompt  if prompter.scanner == "A" : => "1" / if prompter.scanner == "B": => "2"
         5. go to next scene choosed by user
          */
-        JsonObject scene = script.get("0").getAsJsonObject();
-        String voiceOver = script.get("0").getAsJsonObject().get("voice over").getAsString();
-        String nPC = script.get("").getsome
+        JsonObject thisScene = script.get(scene).getAsJsonObject();
+        JsonObject player = thisScene.get("Player").getAsJsonObject();
+        String voiceOver = thisScene.get("voice over").getAsString();
+        String nPC = thisScene.get("NPC").getAsString();
 
-
-
-
+        System.out.println(voiceOver);
+        Prompter.promptEnterKey();
+        System.out.println(nPC);
+        Prompter.promptEnterKey();
+        System.out.println(player.get("voice").getAsString());
     }
 
-    //TODO: write a method to tell Story
+    //TODO: write a method to handle player's choice and able to redirect to next scene
 }
