@@ -27,24 +27,8 @@ public class StartGame {
         }
     }
 
-    //TODO: write a method to create UserName
-    public void createUserName(){
-        //take user input and create a json object
-        Gson gson = new GsonBuilder().create();
-        String startGame = "Please creat your user ID";
-        String userID = Prompter.ask(startGame);
-        User user = new User(userID);
-        String userJson = gson.toJson(user, User.class);
-        System.out.println(userJson);
+    //TODO: write a method to choose to start new game or load game
 
-        //write json object into user.json
-        try {
-            gson.toJson(user, new FileWriter("resources/user.json"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
 
     //TODO: write a method to load game to play
 

@@ -6,4 +6,42 @@ _________          _______        _______ _________ _______  _______      ______
    | |   | (   ) || (            | (\ (      | |         ) || (          | |   | || (               | |   | (\ (   | |   | || | \   |      | |   | || (   ) || | \   |
    | |   | )   ( || (____/\      | ) \ \_____) (___/\____) || (____/\    | (___) || )            ___) (___| ) \ \__| (___) || )  \  |      | )   ( || )   ( || )  \  |
    )_(   |/     \|(_______/      |/   \__/\_______/\_______)(_______/    (_______)|/             \_______/|/   \__/(_______)|/    )_)      |/     \||/     \||/    )_)
+
+     `  ``  ``  `  ``  `  ``  :o:``  `  ``  ``  `--``:ossssssyyhhso-``  ``  ``  `
+   ``  `  ``  `  ``  `  ``  `-MMMy ``  `  ``  `sNMMNNMy:+ssyyhhdNMMMMdo:  ``  `  ``
+     `  ``  ``  `  ``  `  `` +MMMMo  `  ``  `-dMMMMMMMMMMMmo:.```-dMMMMMm+` ``  `
+   `   `      `   `  `   `  `+MMm:y.   `    .mMMMMMMMMMMNM. `   ` .mMMMMMMm+  `   `
+                             :MN- ``       `dMMMMMMMMMMM/yh        +MMMMMMMhy`
+     `   `  `   ` oy+/.`  `` .MNdhdmmm-  ` +MMMNdhhdmMMM.`m/  `   ``NMMMMMm`yy  `            Welcome to the Rise of Iron Man! Please enter your choice to play:
+   ``  `  ``  `  .MM..+:``  ``mMMMMMMho`  `mMMMs````/MMM``ym``  `  `yMMMMMh``N:  ``          
+     `  ``  ``  `.MM/  `  ``  smo+/:..m```:MMMMm/:.`oMMM  oMo `  `` :MMMMMy `so `            
+   ``  `  ``  `  `mMNy- ``  ``:Ndo```+M+  oMMMMMMNs sMMM``/MN`  `  ``sdmmms` /s  ``
+     `  ``  ``  ` /MMMNdo-``  `NMMy.`dMm``hMMMMMmh:`yMMM  /MM/`  ``  ```..` `:s `            
+   ``  `  ``  `  ``sMMMMMN: `  sMMMNmMMMy`mMMMMm/-` dMm/``:MMh  `  ``  `  `` /o  ``
+     `   `  `   `  `hMMs/-``  `:MMmdhyyhMdNMMMMMM/ -do.``:hMMN:` ``  `   `  `s+ `            1. New Story
+   `   `:++:` `   ` `hMmo. `.. `Nh+:`  -MMMMMMMMN```.` -hy:-:oydy/-.`  `  ```m+   `
+       /Mysyy+.      .dMMNdmNm- yMMNs` :MMMMMMMMs     -NMMms:-.-oNNmdyo///::sm-              2. Resume my story from a saved file
+     ` :Ndo:..` `` `  .mMMMMMN- +MMMMyymMMMMMMMN:` `  sMMMMMMNmmmNMMMMMNsoohm-  `
+   ``  `/dMNms/ymh-  ` :MMMMN/ `+MMMMMMMMMMMMMMMNms``..sMMMMMMMMMMMMMMMNysyh- `  ``
+     `  `.+mMMMMmo.``  `yMMMMdhdNMMMMMMMMMMMMMMMMMy``h-`+MMMMMMMMMMMMMMMMMN:``  `
+   ``  `  `./dMN+::-:/` -MMMMMMMMMMMMMNNMNNMMMMMMM+  +m``+MMMMMMMMMMMMMMMN/`  `  ``          if you want to leave the game, please enter EXIT 
+     `   `  ``:hNMMMMMh: oMMMMMMMMNs/:-sd--:omMMMMh```+:  yMMMMMMMMMMMMMN+  ``  `
+   ``  `  ``  ``-yNMMmh/``yMMMMMh+do` `od```/d+sNMMdys` ``.MMMMMMMMMMMMN/ ``  `  ``
+     `   `  `   ` -ss-``.+NMMMN+``.yh++sh+osd-  :mMMo` `  `yhhhhddmmmmh: `  `   `
+   `   `  ``  `   ` ./yhmMMMMMd+:--y+h+++/yos/-:+yMMN/  ``  `  `.-:+oosso+-`  `   `
+                     `/mMMMMMN-:+om+y-    .sshy+:-yMMs `y+-..:ohdNMMMMMMMMN+
+     `   `  `   `  `   :NMMMMm` `.m-h`   ` oos+.` oMMmy-MMMNNMMMMMMMMMMMMMM/`   `
+   ``  `  ``  `  ``  `  +MMMMMosssys+s-...+oohssysmMMMMMMMMMMMMMMMMMMMMMMm+`  `  ``
+     `   `  `   `  ``  ``NMMMMm:```+hy+oy+shh.  .yMMMMMMMMMMMMMMMMMMNmds/`  `   `
+   ``  `  ``  `  ``  `  `dMMMMMd:`:do.:yd::-hs..yMMMMMMMMMMMNmdys+/:-` `  ``  `  ``
+     `  ``  ``  `  ``  `-MMMMMMMMdN:`` od` `.hmNMMMMMMMMMMd+-``  ``  `  ``  ``  `
+   ``  `  ``  `  ``  ` .mMMMMMMMMMMNdysdmoyhmMMMMMMMMMMMMo` ``  `  ``  `  ``  `  ``
+     `  ``  ``  `  `` .mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN/ ``  `  ``  `  ``  ``  `
+   `   `  ``  `   `  `hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNs.``  `   `  `   `  ``  `   `
+                     `MMMMMMNMMMMMMMMMMMMMMMMMMMMNms/`
+     `   `  `   `  `  yMMMMMd-oydNMMMMMMMMNmdhs+:. `   `      `   `  `   `  `   `
+   ``  `  ``  `  ``  ``hMMMMMd/````...-..```` `  ``  `  ``  ``  `  ``  `  ``  `  ``
+     `  ``  ``  `  ``  `+mMMMMMMmhhyyyyhddy/``  `  ``  `  ``  `  ``  `  ``  ``  `
+   ``  `  ``  `  ``  `  ``-ohmNMMMMNmhso- ``  `  ``  `  ``  ``  `  ``  `  ``  `  ``
+
                                                                                                                                                                       
