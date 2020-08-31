@@ -12,9 +12,6 @@ import java.sql.SQLOutput;
 
 public class StoryTeller {
 
-
-
-
     //load JSON objects
     public JsonObject getStory(File path)  {
         JsonElement jsonFile = null;
@@ -27,7 +24,7 @@ public class StoryTeller {
     }
 
     //run the script and return userInput to change scene
-    public void runScript (JsonObject script, String scene){
+    public static void runScript (JsonObject script, String scene){
         /*
         1. print voice over
         2. print NPC
@@ -48,7 +45,4 @@ public class StoryTeller {
         String nextScene = player.get("reply").getAsJsonObject().get(answer).getAsString();
         runScript(script,nextScene);
     }
-
-    //TODO: take a string and find the scene to run
-
 }
