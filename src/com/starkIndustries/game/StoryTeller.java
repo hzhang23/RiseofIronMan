@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.SQLOutput;
+import java.util.Set;
 
 public class StoryTeller {
 
@@ -34,15 +35,24 @@ public class StoryTeller {
          */
         JsonObject thisScene = script.get(scene).getAsJsonObject();
         JsonObject player = thisScene.get("Player").getAsJsonObject();
-        String voiceOver = thisScene.get("voice over").getAsString();
-        String nPC = thisScene.get("NPC").getAsString();
-
-        System.out.print(voiceOver);
-        Prompter.promptEnterKey();
-        System.out.println(nPC);
-        Prompter.promptEnterKey();
-        String answer = Prompter.ask(player.get("voice").getAsString()).toUpperCase();
-        String nextScene = player.get("reply").getAsJsonObject().get(answer).getAsString();
-        runScript(script,nextScene);
+        Set<String> sceneKey = thisScene.keySet();
+        Set<String> playerKey = player.get("reply").getAsJsonObject().keySet();
+        for (String key : sceneKey){
+            if (!key.equals("Player")){
+                System.out.println(thisScene.get(key).getAsString());
+                Prompter.promptEnterKey();
+            }
+        }
+        String answer = Prompter.handleResponse(player.get("voice").getAsString());
+        if (answer.toUpperCase().equals("EXIT")){
+            StartGame newGame = new StartGame();
+            newGame.exitGame(scene);
+        }else if (playerKey.contains(answer.toUpperCase())) {
+            String nextScene = player.get("reply").getAsJsonObject().get(answer).getAsString();
+            runScript(script,nextScene);
+        }else {
+            System.out.println("Please enter a valid input");
+        }
     }
+
 }
