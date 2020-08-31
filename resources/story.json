@@ -12,13 +12,13 @@
     }
   },
   "1": {
-    "voice over": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest",
+    "voice over": "Tony realizes that he is connected to a battery. He rips off the bandages over his chest to see an electromagnet in his chest",
     "NPC": "Yinsen: I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs",
     "Player": {
-      "voice": "You realize that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Remove it from your body",
+      "voice": "I'm connected to a battery: A: Ask Yinsen what it is   B: Remove it from your body",
       "reply": {
         "A": "3",
-        "B": "2"
+        "B": "fail"
       }
     }
   },
@@ -26,14 +26,12 @@
     "voice over":"In shock to Tony's response, Yinsen turns away from Tony",
     "NPC":"Yinsen: You know I could be some help to you Tony, you should be more friendly",
     "Player": {
-      "voice": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Remove it from your body\"",
+      "voice": "I'm connected to a battery: A: Ask Yinsen what it is   B: Remove it from your body",
       "reply": {
         "A": "3",
         "B": "fail"
       }
     }
-
-
   },
   "3": {
     "voice over": "Dazed and confused you begin to zip up your coat.",
@@ -62,7 +60,7 @@
     }
   },
   "5": {
-    "NPC": "Yinsen: Tony sitting around a small fire in the cave with Tony] I'm sure they're looking for you, Stark. But they will never find you in these mountains. Look, what you just saw, that is your legacy, Stark. Your life's work, in the hands of those murderers. Is that how you want to go out? Is this the last act of defiance of the great Tony Stark? Or are you going to do something about it?",
+    "NPC": "Yinsen: I'm sure they're looking for you, Stark. But they will never find you in these mountains. Look, what you just saw, that is your legacy, Stark. Your life's work, in the hands of those murderers. Is that how you want to go out? Is this the last act of defiance of the great Tony Stark? Or are you going to do something about it?",
     "voice over": "Moving closer to the fire, Tony rubs his chest where the he thinks about his legacy",
     "Player": {
       "voice": "What will you do: A: Create a plan with Yinsen to escape B: Give up and build Jerchio missle",
@@ -121,8 +119,7 @@
     }
   },
   "10":{
-    "NPC": "Raza: The 10 rings have been around before MANKIND!! We have inflitrated every body of you Americas pityful goverment",
-    "NPC": "We are a organization of faith, you will soon see Tony",
+    "NPC": "Raza: The 10 rings have been around before MANKIND!! We have inflitrated every body of you Americas pityful goverment; We are a organization of faith, you will soon see Tony",
     "Player": {
       "voice": "What are you planning? What are these missles for? A: Ask Raza what the missles are for B: What is the purpose of this?",
       "reply": {
