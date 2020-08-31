@@ -137,14 +137,135 @@
     "NPC": "Yinesen: Tony....Tony! We have did it! The suit is almost complete",
     "Player": {
       "voice": "This is it...we did it. Time to move to the next steps A: Try suit on B: Begin to plan the attack",
+      "reply": {
       "A": "12",
       "B": "fail4"
+      }
     }
   },
   "12": {
-
+    "voice over": "With numbered days Raza and the 10 rings expect their weapons to be complete.",
+    "NPC": "Raza: Tony Tony Tony, we must see these missles soon, our mission is approaching soon!!!",
+    "NPC": "Yinesen: It's time! we must stop this now!!",
+    "Player": {
+      "voice": "It's time for some payback! A:Put Armored suit on and escape B:Hide scared from the fight",
+      "reply": {
+        "A": "13",
+        "B": "fail5"
+      },
+    }
   },
-
+  "13": {
+    "voice over": "With time counting down, Tony and Yinesen begin to assembly the suit on Tony. Simultanesuly Raza sees somthing Suspicious on Camera, he send soilders to go check.",
+    "NPC": "Yinesen: We must hurry we must complete the power sequence.It's loading, I'll but us more time!!",
+    "voice over": "Yinesen grabs a weapon and begins firing. Keeping the eneimes back long enough for the suit to be ready.",
+    "NPC": "Raza: What is this Tony? You think you can outsmart the 10 rings!?",
+    "Player": {
+      "voice": "Yea pal, I think I can! A: Use the Armored suit and lanch attack to escape B: Kill Raza and go save Yinesen.",
+      "reply": {
+        "A": "14",
+        "B": "15"
+      }
+    }
+  },
+  "14": {
+    "voice over": "The Battle begins! Tony shoots a missle towards Raza, The blast throws him. Tony starts towards Yinesen when a group of soliders start firing.",
+    "NPC": "Solider: Give up Tony you'll never escape!",
+    "Player": {
+      "voice": "Lets see how you feel about this A: fire flame thrower at soliders B: Throw a haymaker at the solider.",
+      "reply": {
+        "A": "16",
+        "B": "17"
+      }
+    }
+  },
+  "15": {
+    "voice over": "The Battle begins! Tony shoots a missle towards Raza, The blast throws him. Tony starts towards Yinesen when a group of soliders start firing.",
+    "NPC": "Solider: Give up Tony you'll never escape!",
+    "Player": {
+      "voice": "Lets see how you feel about this A: fire flame thrower at soliders B: Throw a haymaker at the solider.",
+      "reply": {
+        "A": "16",
+        "B": "17"
+      }
+    }
+  },
+  "16": {
+    "voice over": "Tony moves forward wondering through the cave searching for Yinesen.",
+    "NPC": "Yinesen: Tony...Tony, I'm here",
+    "voice over": "As Tony approaches he sees Yinesen is mortialy wounded.",
+    "NPC": "Yinesen: Tony, I'm going to see my family, I want this. You have your life. Don't waste it...don't waste it."
+    "Player": {
+      "voice": "Thank you for saving me. A: Begin to Assault your way out of the cave.",
+      "reply": {
+        "A": "17",
+      }
+    }
+  },
+  "17": {
+    "voice over": "Yinsen dies. Tony turns angry. There are men waiting outside of the mouth of the cave. They all shoot at Tony in the suit, but don't do any damage",
+    "Player": {
+      "voice": "My turn!! A: Use Flamethrower B: Use metal arms and fist to attack.",
+      "reply": {
+        "A": "18",
+        "B": "19"
+      }
+    }
+  },
+  "18": {
+    "voice over":"Tony shoots fire at the men and their camp from his suit. The men continue to shoot at Tony, beginning to cause damage to the suit. Tony flips a suit and shoots up in the air. He screams as he falls into the sand on the other side of the mountains. The suit breaks when he lands.",
+    "Player":{
+      "voice": "Not bad at all. A: sit in the sand and take a break B: Attempt to put suit back together.",
+      "reply": {
+        "A": "20",
+        "B": "21"
+      }
+    }
+  },
+  "19": {
+    "voice over":"Tony shoots fire at the men and their camp from his suit. The men continue to shoot at Tony, beginning to cause damage to the suit. Tony flips a suit and shoots up in the air. He screams as he falls into the sand on the other side of the mountains. The suit breaks when he lands.",
+    "Player":{
+      "voice": "Not bad at all. A: sit in the sand and take a break B: Attempt to put suit back together.",
+      "reply": {
+        "A": "20",
+        "B": "fail6"
+      }
+    }
+  },
+  "20": {
+    "voice over": "Tony then is seen wondering through the desert, exhausted. Military helicopters fly up from behind him.",
+    "Player": {
+      "voice": "Oh damn who is this? A: Start waving down helicopters B: Hide in the sand.",
+      "reply": {
+        "A": "21",
+        "B": "fail7",
+      }
+    }
+  },
+  "21": {
+    "voice over": "As one of the helicopters lands, Tony collapses to his knees, holding up a peace sign. Rhodes and a few men are seen running up to Tony from the helicopter",
+    "NPC": "James Rhodes: How was vaction? Next time you're riding with me",
+    "Player": {
+      "voice": " Took you long enough A: reach for Rhodes hand, It's time to go home",
+      "reply": {
+        "A": "22"
+      }
+    }
+  },
+  "22": {
+    "voice over": "Now that Tony is home and safe he begins to realize he has a bigger purpose in life. As he gets ready for a press conference Rhodes begins to pressure to not tell anyone about the suit.",
+    "NPC": "James Rhodes: Tony you just can't. Do you realize what this would look like in the public eye?",
+    "Player": {
+      "voice": "Listen Rhodes I have to change my legacy, I have to do something better for the name Stark. A: tell the world B: Keep it a secret.",
+      "reply": {
+        "A": "23",
+        "B": "fail8"
+      },
+    }
+  },
+  "23": {
+    "voice over": "I AM IRONMAN!!!"
+  },
   "fail": {
     "voice over": "Game over, you have Died!!"
   },
@@ -157,8 +278,19 @@
   },
   "fail4": {
     "voice over": "Raza catches you trying on suit, Kills you both. GAME OVER!!!"
+  },
+  "fail5": {
+    "voice over": "You have to fight back!! Game over"
+  },
+  "fail6": {
+    "voice over": "The suit is unrepairable, The heat gets to Tony. He dies, GAME OVER!!"
+  },
+  "fail7": {
+    "voice over": "The Helio is your only escape!! You can't surive the heat!! GAME OVER!!"
+  },
+  "fail8": {
+    "voice over": "Do you want to be IRONMAN or not??? GAME OVER!!"
   }
-
 }
 
 
