@@ -21,4 +21,13 @@ Prompter {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
+
+    public static String handleResponse(String question){
+        String answer = "I am a default String";
+        while ( !answer.equals("EXIT") && !answer.equals("A") && !answer.equals("B")){
+            System.out.println("Please enter a valid input");
+            answer = ask(question).toUpperCase();
+        }
+        return answer;
+    }
 }
