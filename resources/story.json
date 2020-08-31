@@ -3,7 +3,7 @@
     "voice over": "You are Tony Stark, a billionare that is trapped in a cave by terrorist, you need to stay alive and find a way to escape. there is fire pit in front of you and a person is standing by the fire pit and he is talking",
     "NPC": "Yinsen: I won't move if I were you",
     "Player": {
-        "voice": "what would your reply?  A: could you help me?    B: What the hell did you do to me??",
+        "voice": "What would you reply?  A: Can you help me?    B: What the hell did you do to me??",
         "reply": {
         "A": "1",
         "B": "2",
@@ -13,9 +13,9 @@
   },
   "1": {
     "voice over": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest",
-    "NPC": "Yinsen: What I did? What I did is to save your life. I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs",
+    "NPC": "Yinsen: I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs",
     "Player": {
-      "voice": "You realizes that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Remove it from your body",
+      "voice": "You realize that you are connected to a battery. you rips off the bandages over your chest to see an electromagnet your his chest. and you want to: A: ask Yinsen what it is ;  B: Remove it from your body",
       "reply": {
         "A": "3",
         "B": "2"
@@ -152,7 +152,7 @@
       "reply": {
         "A": "13",
         "B": "fail5"
-      },
+      }
     }
   },
   "13": {
@@ -194,11 +194,11 @@
     "voice over": "Tony moves forward wondering through the cave searching for Yinesen.",
     "NPC": "Yinesen: Tony...Tony, I'm here",
     "voice over": "As Tony approaches he sees Yinesen is mortialy wounded.",
-    "NPC": "Yinesen: Tony, I'm going to see my family, I want this. You have your life. Don't waste it...don't waste it."
+    "NPC": "Yinesen: Tony, I'm going to see my family, I want this. You have your life. Don't waste it...don't waste it.",
     "Player": {
       "voice": "Thank you for saving me. A: Begin to Assault your way out of the cave.",
       "reply": {
-        "A": "17",
+        "A": "17"
       }
     }
   },
@@ -238,7 +238,7 @@
       "voice": "Oh damn who is this? A: Start waving down helicopters B: Hide in the sand.",
       "reply": {
         "A": "21",
-        "B": "fail7",
+        "B": "fail7"
       }
     }
   },
@@ -260,7 +260,7 @@
       "reply": {
         "A": "23",
         "B": "fail8"
-      },
+      }
     }
   },
   "23": {
