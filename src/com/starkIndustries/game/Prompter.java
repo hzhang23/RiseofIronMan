@@ -2,7 +2,9 @@ package com.starkIndustries.game;
 
 import java.util.Scanner;
 
-public class Prompter {
+public class
+
+Prompter {
 
     public static String ask(String question) {
 
