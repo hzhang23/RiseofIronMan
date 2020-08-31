@@ -85,6 +85,63 @@
     }
   },
   "7": {
+    "voice over": "As Tony and Yinsen discuss the plan, Tony starts to make a list of conpomtants to build the Armored suit",
+    "NPC": "Yinesen: What is this?",
+    "Player": {
+      "voice": "This is our way out of here! A: Unroll drawings to show the plan B: Keep the plan a secret for now",
+      "reply": {
+        "A": "8",
+        "B": "9"
+      }
+    }
+
+  },
+
+  "8": {
+    "voice over": "As Tony and Yinsen begin to collect and discuss plans to escape footsteps are heard approaching",
+    "NPC": "Yinesen: Quick roll up the plans, cover the materials",
+    "NPC": "Raza: Tony Stark!! Having you build my misslies will please the 10 Rings! Soon the whole world will bow before us.",
+    "Player": {
+      "voice": "Tony ponders his thoughts before replying A: What is the 10 Rings B: What are these missiles for?",
+      "reply": {
+        "A": "10",
+        "B": "11"
+      }
+    }
+
+  },
+  "9": {
+    "NPC": "Yinesen: Tony you must start trusting me for this plan to work!",
+    "Player": {
+      "voice": "You're right Yinesen I should start trusting you A: Show Yinsen the plans B: Tell Yinesesn he'll find out soon.",
+      "reply": {
+        "A": "8",
+        "B": "8"
+      }
+    }
+  },
+  "10":{
+    "NPC": "Raza: The 10 rings have been around before MANKIND!! We have inflitrated every body of you Americas pityful goverment",
+    "NPC": "We are a organization of faith, you will soon see Tony",
+    "Player": {
+      "voice": "What are you planning? What are these missles for? A: Ask Raza what the missles are for B: What is the purpose of this?",
+      "reply": {
+        "A": "11",
+        "B": "11"
+      }
+    }
+  },
+  "11": {
+    "voice over": "As Raza contiues the story of the 10 rings Tony begins to reliaze how inportant his plan to esacpe is",
+    "voice over": "6 days later",
+    "NPC": "Yinesen: Tony....Tony! We have did it! The suit is almost complete",
+    "Player": {
+      "voice": "This is it...we did it. Time to move to the next steps A: Try suit on B: Begin to plan the attack",
+      "A": "12",
+      "B": "fail4"
+    }
+  },
+  "12": {
 
   },
 
@@ -97,8 +154,13 @@
 
   "fail3": {
     "voice over": "Tony completes missle, Then is killed by enemies, GAMEOVER!!"
+  },
+  "fail4": {
+    "voice over": "Raza catches you trying on suit, Kills you both. GAME OVER!!!"
   }
 
 }
+
+
 
 
