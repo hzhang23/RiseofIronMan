@@ -17,7 +17,7 @@ Prompter {
     }
 
     public static void promptEnterKey(){
-        System.out.println("Please press \"ENTER\" to continue....");
+        System.out.println("\n ** Please press \"ENTER\" to continue **");
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
