@@ -6,8 +6,7 @@
         "voice": "What would you reply?  A: Can you help me?    B: What the hell did you do to me??",
         "reply": {
         "A": "1",
-        "B": "2",
-        "exit": "exit game"
+        "B": "2"
       }
     }
   },
@@ -48,7 +47,7 @@
 
   },
   "4": {
-    "NPC": "Solider: Welcome, Tony Stark, the most famous mass murderer in the history of America, you will build a Jericho Missile for us, like the one you demostrated",
+    "Solider": "Solider: Welcome, Tony Stark, the most famous mass murderer in the history of America, you will build a Jericho Missile for us, like the one you demostrated",
     "NPC2": "Yinsen: Tony, you must, they will kill us both",
     "voice over": "Tony begins to think of a plan, he gazes over to Yinsen,",
     "Player": {

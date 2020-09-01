@@ -32,13 +32,13 @@ public class StartGame {
         }
     }
 
-    //TODO: write a method to choose to start new game or load game
+    //DONE: write a method to choose to start new game or load game
     public void initGame(){
-        printBanner();
+        //printBanner();
         String userInput = scanner.nextLine();
-        if (Integer.parseInt(userInput) == 1) {
+        if (userInput.equals("1")) {
             storyTeller.runScript(newStory,"0");
-        }else if (Integer.parseInt(userInput) == 2){
+        }else if (userInput.equals("2")){
             readGameFile();
         }else if (userInput.toUpperCase().equals("EXIT")){
             System.out.println("thanks for playing!");
@@ -71,7 +71,6 @@ public class StartGame {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
     //DONE: method to save game
@@ -91,8 +90,6 @@ public class StartGame {
             e.printStackTrace();
         }
     }
-
-
 
     //DONE: method exit game
     public void exitGame(String scene){
