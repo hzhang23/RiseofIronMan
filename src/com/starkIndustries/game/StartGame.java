@@ -84,7 +84,6 @@ public class StartGame {
             JsonElement gameFile = JsonParser.parseReader(new FileReader("resources/gameFile.json"));
             Type fileMap = new TypeToken<Map<String, String>>(){}.getType();
             Map<String,String> newMap = gson.fromJson(gameFile, fileMap);
-            System.out.println(newMap);
             newMap.put(fileToSave,sceneNum);
             Writer writer = new FileWriter("resources/gameFile.json");
             gson.toJson(newMap, writer);
