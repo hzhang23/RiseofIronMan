@@ -1,0 +1,43 @@
+@startuml
+
+class PlayerClient {
+    void main()
+}
+
+class Prompter {
+    static String ask()
+    static void promptEnterKey()
+    static String handleResponse()
+}
+
+class StartGame {
+    private StoryTeller
+    private File
+    private JsonObject
+
+    void printBanner()
+    void initGame()
+    void readGameFile()
+    void saveGame()
+    void exitGame()
+}
+
+class StoryTeller {
+    JsonObject getStory()
+    static void runScript()
+
+}
+
+StartGame <|-- PlayerClient
+
+StoryTeller <|-- StartGame: HAS-A
+
+StoryTeller <-- Prompter
+
+
+
+
+
+
+
+@enduml
