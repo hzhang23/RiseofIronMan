@@ -61,13 +61,16 @@ public class StartGame {
                 System.out.println("No."+ (i+1) + " game file is: " + keyList.get(i));
             }
            String userInput =  Prompter.ask("Please enter the number for which game file you would like to continue " +
-                   "to play" +
-                    " " +
-                    "with:");
-            Integer chosenIdx = Integer.parseInt(userInput) - 1;
+                   "to play " + "with:");
             //TODO: write a if statement to validate keyList has the the input
-            String scene = gameFileObj.get(keyList.get(chosenIdx)).getAsString();
-            storyTeller.runScript(newStory, scene);
+            try{
+                Integer chosenIdx = Integer.parseInt(userInput) - 1;
+                String scene = gameFileObj.get(keyList.get(chosenIdx)).getAsString();
+                storyTeller.runScript(newStory, scene);
+            } catch (NumberFormatException | IndexOutOfBoundsException e) {
+                System.out.println("Please enter a valid input");
+                readGameFile();
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
