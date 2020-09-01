@@ -26,7 +26,6 @@ public class StoryTeller {
 
     //run the script and return userInput to change scene
     public static void runScript (JsonObject script, String scene) {
-
         JsonObject thisScene = script.get(scene).getAsJsonObject();
         Set<String> sceneKey = thisScene.keySet();
         if (sceneKey.size() == 1) {

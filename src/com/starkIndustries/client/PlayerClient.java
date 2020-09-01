@@ -9,6 +9,7 @@ import java.io.File;
 public class PlayerClient {
     public static void main(String[] args) {
         StartGame startGame = new StartGame();
+        startGame.printBanner();
         startGame.initGame();
     }
 }
