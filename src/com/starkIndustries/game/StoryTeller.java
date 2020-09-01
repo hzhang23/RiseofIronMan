@@ -25,33 +25,33 @@ public class StoryTeller {
     }
 
     //run the script and return userInput to change scene
-    public static void runScript (JsonObject script, String scene){
-        /*
-        1. print voice over
-        2. print NPC
-        3. print player. player voice
-        4. take user prompt  if prompter.scanner == "A" : => "1" / if prompter.scanner == "B": => "2"
-        5. go to next scene choosed by user
-         */
+    public static void runScript (JsonObject script, String scene) {
+
         JsonObject thisScene = script.get(scene).getAsJsonObject();
-        JsonObject player = thisScene.get("Player").getAsJsonObject();
         Set<String> sceneKey = thisScene.keySet();
-        Set<String> playerKey = player.get("reply").getAsJsonObject().keySet();
-        for (String key : sceneKey){
-            if (!key.equals("Player")){
-                System.out.println(thisScene.get(key).getAsString());
-                Prompter.promptEnterKey();
+        if (sceneKey.size() == 1) {
+            for (String key : sceneKey) {
+                System.out.println(thisScene.get(key));
             }
-        }
-        String answer = Prompter.handleResponse(player.get("voice").getAsString());
-        if (answer.toUpperCase().equals("EXIT")){
-            StartGame newGame = new StartGame();
-            newGame.exitGame(scene);
-        }else if (playerKey.contains(answer.toUpperCase())) {
-            String nextScene = player.get("reply").getAsJsonObject().get(answer).getAsString();
-            runScript(script,nextScene);
-        }else {
-            System.out.println("Please enter a valid input");
+        } else {
+            JsonObject player = thisScene.get("Player").getAsJsonObject();
+            Set<String> playerKey = player.get("reply").getAsJsonObject().keySet();
+            for (String key : sceneKey) {
+                if (!key.equals("Player")) {
+                    System.out.println(thisScene.get(key).getAsString());
+                    Prompter.promptEnterKey();
+                }
+            }
+            String answer = Prompter.handleResponse(player.get("voice").getAsString());
+            if (answer.toUpperCase().equals("EXIT")) {
+                StartGame newGame = new StartGame();
+                newGame.exitGame(scene);
+            } else if (playerKey.contains(answer.toUpperCase())) {
+                String nextScene = player.get("reply").getAsJsonObject().get(answer).getAsString();
+                runScript(script, nextScene);
+            } else {
+                System.out.println("Please enter a valid input");
+            }
         }
     }
 
