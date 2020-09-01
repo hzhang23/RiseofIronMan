@@ -36,8 +36,8 @@
   "3": {
     "voice over": "Dazed and confused you begin to zip up your coat.",
     "NPC": "Yinsen: That is an electromagnet, hooked up to a car battery, and it's keeping the shrapnel from entering your heart. Hmm? That's right. Smile. We met once, you know, at a technical conference in Bern.",
-    "voice over": "Loud voices sound from the another side of the metal door as they open it.",
-    "NPC": "Yinsen: Come on, stand up. Stand up! Just do as I do. Come on, put your hands up",
+    "voice over2": "Loud voices sound from the another side of the metal door as they open it.",
+    "NPC2": "Yinsen: Come on, stand up. Stand up! Just do as I do. Come on, put your hands up",
     "Player":{
       "voice": "You notice the men with guys, the guns belong to you. What do you want to do: A: Stand up;  B: Remain seated \"",
       "reply": {
@@ -49,7 +49,7 @@
   },
   "4": {
     "NPC": "Solider: Welcome, Tony Stark, the most famous mass murderer in the history of America, you will build a Jericho Missile for us, like the one you demostrated",
-    "NPC": "Yinsen: Tony, you must, they will kill us both",
+    "NPC2": "Yinsen: Tony, you must, they will kill us both",
     "voice over": "Tony begins to think of a plan, he gazes over to Yinsen,",
     "Player": {
       "voice": "What do you want to do: A: Agree to build Jericho Missile;  B: Refuse \"",
@@ -98,7 +98,7 @@
   "8": {
     "voice over": "As Tony and Yinsen begin to collect and discuss plans to escape footsteps are heard approaching",
     "NPC": "Yinesen: Quick roll up the plans, cover the materials",
-    "NPC": "Raza: Tony Stark!! Having you build my misslies will please the 10 Rings! Soon the whole world will bow before us.",
+    "NPC2": "Raza: Tony Stark!! Having you build my misslies will please the 10 Rings! Soon the whole world will bow before us.",
     "Player": {
       "voice": "Tony ponders his thoughts before replying A: What is the 10 Rings B: What are these missiles for?",
       "reply": {
@@ -130,7 +130,7 @@
   },
   "11": {
     "voice over": "As Raza contiues the story of the 10 rings Tony begins to reliaze how inportant his plan to esacpe is",
-    "voice over": "6 days later",
+    "voice over2": "6 days later",
     "NPC": "Yinesen: Tony....Tony! We have did it! The suit is almost complete",
     "Player": {
       "voice": "This is it...we did it. Time to move to the next steps A: Try suit on B: Begin to plan the attack",
@@ -190,8 +190,8 @@
   "16": {
     "voice over": "Tony moves forward wondering through the cave searching for Yinesen.",
     "NPC": "Yinesen: Tony...Tony, I'm here",
-    "voice over": "As Tony approaches he sees Yinesen is mortialy wounded.",
-    "NPC": "Yinesen: Tony, I'm going to see my family, I want this. You have your life. Don't waste it...don't waste it.",
+    "voice over2": "As Tony approaches he sees Yinesen is mortialy wounded.",
+    "NPC2": "Yinesen: Tony, I'm going to see my family, I want this. You have your life. Don't waste it...don't waste it.",
     "Player": {
       "voice": "Thank you for saving me. A: Begin to Assault your way out of the cave.",
       "reply": {
