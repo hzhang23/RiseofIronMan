@@ -1,28 +1,100 @@
 @startuml
-object Scene0
-object Scene1
-object Scene2
-object Scene3
-object Scene4
-object Scene5
-object Scene6
-object Scene7
-object Scene8
-object Scene9
-object Scene10
-object Scene11
-object Scene12
-object Scene13
-object Scene14
-object Scene15
-object Scene16
-object Scene17
-object Scene18
-object Scene19
-object Scene20
-object Scene21
-object Scene22
-object Scene23
+object Scene0 {
+    "You are Tony Stark, a billionare that is trapped in a cave by terrorist..."
+}
+
+object Scene1 {
+    "Tony realizes that he is connected to a battery..."
+}
+
+object Scene2 {
+    "In shock to Tony's response, Yinsen turns away from Tony..."
+}
+
+object Scene3 {
+    "Dazed and confused you begin to zip up your coat..."
+}
+
+object Scene4 {
+    "Tony begins to think of a plan, he gazes over to Yinsen..."
+}
+
+object Scene5 {
+    "Moving closer to the fire, Tony rubs his chest where the he thinks about his legacy..."
+}
+
+object Scene6 {
+    "Tony and Yinsen sit together by the fire, quietly going over there master plan to escape..."
+}
+
+object Scene7 {
+    "As Tony and Yinsen discuss the plan, Tony starts to make a list of conpomtants to build the Armored suit..."
+}
+
+object Scene8 {
+    "As Tony and Yinsen begin to collect and discuss plans to escape footsteps are heard approaching..."
+}
+
+object Scene9 {
+    "Yinesen: Tony you must start trusting me for this plan to work!"
+}
+
+object Scene10 {
+    "Raza: The 10 rings have been around before MANKIND!! We have inflitrated every body of you Americas pityful goverment; We are a organization of faith, you will soon see Tony..."
+}
+
+object Scene11 {
+    "As Raza contiues the story of the 10 rings Tony begins to reliaze how inportant his plan to esacpe is..."
+}
+
+object Scene12 {
+    "With numbered days Raza and the 10 rings expect their weapons to be complete..."
+}
+
+object Scene13 {
+    "With time counting down, Tony and Yinesen begin to assembly the suit on Tony. Simultanesuly Raza sees somthing Suspicious on Camera, he send soilders to go check..."
+}
+
+object Scene14 {
+    "The Battle begins! Tony shoots a missle towards Raza, The blast throws him..."
+}
+
+object Scene15 {
+    "The Battle begins! Tony shoots a missle towards Raza, The blast throws him..."
+}
+
+object Scene16 {
+    "Tony moves forward wondering through the cave searching for Yinesen..."
+}
+
+object Scene17 {
+    "Yinsen dies. Tony turns angry..."
+}
+
+object Scene18 {
+    "Tony shoots fire at the men and their camp from his suit. The men continue to shoot at Tony..."
+}
+
+object Scene19 {
+    "Tony shoots fire at the men and their camp from his suit. The men continue to shoot at Tony..."
+}
+
+object Scene20 {
+    "Tony then is seen wondering through the desert, exhausted. Military helicopters fly up from behind him..."
+}
+
+object Scene21 {
+    "As one of the helicopters lands, Tony collapses to his knees, holding up a peace sign..."
+}
+
+object Scene22 {
+    "Now that Tony is home and safe he begins to realize he has a bigger purpose in life. As he gets ready for a press conference Rhodes begins to pressure to not tell anyone about the suit..."
+}
+
+object Scene23 {
+    "WINNING SCENARIO"
+}
+
 object fail
 object fail2
 object fail3
