@@ -1,8 +1,10 @@
 package com.starkIndustries.game;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class startWindow extends JFrame {
+public class StartWindow extends JFrame {
     private JLayeredPane layeredPane;
     private JPanel bgPanel;
     private JLabel bgLabel;
@@ -13,7 +15,7 @@ public class startWindow extends JFrame {
 
 
 
-  public startWindow(){
+  public StartWindow(){
       layeredPane = new JLayeredPane();
       bgImg = new ImageIcon("resources/StartGameBackground.jpg");
       bgPanel = new JPanel();
@@ -24,10 +26,28 @@ public class startWindow extends JFrame {
 
       startBtn = new JButton("Start Game");
       startBtn.setBounds(100,100,100,100);
+      startBtn.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+//              new gameWindow("0");
+          }
+      });
       resumeBtn = new JButton("Resume Game");
       resumeBtn.setBounds(100,250,100,100);
+      resumeBtn.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+//              new gameFileWindow();
+          }
+      });
       exitBtn = new JButton("Exit");
       exitBtn.setBounds(100,400,100,100);
+      exitBtn.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+              System.exit(0);
+          }
+      });
 
       layeredPane.add(bgPanel,JLayeredPane.DEFAULT_LAYER);
       layeredPane.add(startBtn,JLayeredPane.MODAL_LAYER);
@@ -44,7 +64,7 @@ public class startWindow extends JFrame {
 
 
     public static void main(String[] args) {
-        new startWindow();
+        new StartWindow();
     }
 
 }
