@@ -43,11 +43,7 @@ public class StartWindow extends JFrame {
           public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 GameFileWindow window = new GameFileWindow();
-              try {
-                  window.generateWindow();
-              } catch (FileNotFoundException fileNotFoundException) {
-                  fileNotFoundException.printStackTrace();
-              }
+                window.generateWindow();
           }
       });
       exitBtn = new JButton("Exit");
