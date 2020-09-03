@@ -47,7 +47,6 @@ public class GameFileWindow extends JFrame {
 
 
         layeredPane.add(resumePanel, JLayeredPane.DEFAULT_LAYER);
-//        layeredPane.add((Component) buttonsList, JLayeredPane.MODAL_LAYER);
 
 
         this.setLayeredPane(layeredPane);

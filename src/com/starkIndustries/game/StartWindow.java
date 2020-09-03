@@ -38,8 +38,10 @@ public class StartWindow extends JFrame {
       resumeBtn = new JButton("Resume Game");
       resumeBtn.setBounds(100,250,100,100);
       resumeBtn.addActionListener(new ActionListener() {
+
           @Override
           public void actionPerformed(ActionEvent e) {
+                setVisible(false);
                 GameFileWindow window = new GameFileWindow();
               try {
                   window.generateWindow();
