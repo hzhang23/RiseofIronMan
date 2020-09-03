@@ -17,18 +17,31 @@ public class GameFileWindow extends JFrame {
 
     private JLayeredPane layeredPane;
     private ImageIcon bgImg;
+    private JPanel bgPanel;
     private JPanel resumePanel;
+    private JLabel bgLabel;
     private JLabel resumeLabel;
 
-    public void generateWindow() throws FileNotFoundException {
+    public void generateWindow(){
         layeredPane = new JLayeredPane();
         bgImg = new ImageIcon("resources/StartGameBackground.jpg");
+        bgPanel = new JPanel();
+        bgPanel.setBounds(0, 0,bgImg.getIconWidth(),bgImg.getIconHeight());
+        bgLabel = new JLabel(bgImg);
+        bgPanel.add(bgLabel);
+
+
+        // make resumePanel to hold the buttons
         resumePanel = new JPanel();
-        resumePanel.setBounds(0, 0,bgImg.getIconWidth(),bgImg.getIconHeight());
-//        resumeLabel = new JLabel(bgImg);
+        resumePanel.setBounds(100, 300, 400, 200);
+
+
         resumeLabel = new JLabel();
         resumeLabel.setText("Here are your saved games:");
-        resumePanel.add(resumeLabel);
+        resumeLabel.setBounds(100, 100, 400, 200);
+        resumeLabel.setBackground(Color.ORANGE);
+        resumeLabel.setOpaque(true);
+
 
         //getting the list of file names from json file
         List<String> fileNames = readJsonFile();
@@ -37,13 +50,20 @@ public class GameFileWindow extends JFrame {
         List<JButton> buttonsList = createBtns(fileNames);
 
 
-        layeredPane.add(resumePanel, JLayeredPane.DEFAULT_LAYER);
-        layeredPane.add((Component) buttonsList, JLayeredPane.MODAL_LAYER);
-
         // adding the buttons from the list to add to the button
-//        for (JButton button : buttonsList) {
-//
-//        }
+        for (JButton button : buttonsList) {
+            button = new JButton(button.getText());
+            button.setSize(100, 100);
+            resumePanel.add(button);
+        }
+
+
+
+        layeredPane.add(bgPanel, JLayeredPane.DEFAULT_LAYER);
+        layeredPane.add(resumeLabel, JLayeredPane.MODAL_LAYER);
+        layeredPane.add(resumePanel, JLayeredPane.MODAL_LAYER);
+
+
 
         this.setLayeredPane(layeredPane);
         this.setSize(bgImg.getIconWidth(), bgImg.getIconHeight());
@@ -52,14 +72,20 @@ public class GameFileWindow extends JFrame {
     }
 
     //extract json data and feed it into createBtns method
-    public static List<String> readJsonFile() throws FileNotFoundException {
-        JsonElement gameFile = JsonParser.parseReader(new FileReader("resources/gameFile.json"));
-        JsonObject gameFileObj = gameFile.getAsJsonObject();
-        Set<String> keySet = gameFileObj.keySet();
-        List<String> keyList = new ArrayList<>(keySet);
+    public static List<String> readJsonFile() {
+        List<String> keyList = null;
+        try {
+            JsonElement gameFile = JsonParser.parseReader(new FileReader("resources/gameFile.json"));
+            JsonObject gameFileObj = gameFile.getAsJsonObject();
+            Set<String> keySet = gameFileObj.keySet();
+            keyList = new ArrayList<>(keySet);
 
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         return keyList;
     }
+
 
 
     //resume game in startWindow
