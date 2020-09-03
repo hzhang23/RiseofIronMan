@@ -33,7 +33,7 @@ public class GameFileWindow extends JFrame {
 
         // make resumePanel to hold the buttons
         resumePanel = new JPanel();
-        resumePanel.setBounds(300, 300, 400, 200);
+        resumePanel.setBounds(100, 300, 400, 200);
 
 
         resumeLabel = new JLabel();
