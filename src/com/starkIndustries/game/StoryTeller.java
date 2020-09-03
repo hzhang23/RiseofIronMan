@@ -14,7 +14,7 @@ import java.util.Set;
 public class StoryTeller {
 
     //load JSON objects
-    public JsonObject getStory(File path)  {
+    public static JsonObject getStory(File path)  {
         JsonElement jsonFile = null;
         try {
             jsonFile = JsonParser.parseReader(new FileReader(path));
