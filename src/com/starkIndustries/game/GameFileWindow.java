@@ -36,14 +36,19 @@ public class GameFileWindow extends JFrame {
         //making a bunch of buttons from fileNames list
         List<JButton> buttonsList = createBtns(fileNames);
 
-
-        layeredPane.add(resumePanel, JLayeredPane.DEFAULT_LAYER);
-        layeredPane.add((Component) buttonsList, JLayeredPane.MODAL_LAYER);
+        System.out.println(buttonsList);
 
         // adding the buttons from the list to add to the button
-//        for (JButton button : buttonsList) {
-//
-//        }
+        for (JButton button : buttonsList) {
+            button = new JButton(button.getText());
+            resumePanel.add(button);
+        }
+
+
+
+        layeredPane.add(resumePanel, JLayeredPane.DEFAULT_LAYER);
+//        layeredPane.add((Component) buttonsList, JLayeredPane.MODAL_LAYER);
+
 
         this.setLayeredPane(layeredPane);
         this.setSize(bgImg.getIconWidth(), bgImg.getIconHeight());
@@ -52,14 +57,20 @@ public class GameFileWindow extends JFrame {
     }
 
     //extract json data and feed it into createBtns method
-    public static List<String> readJsonFile() throws FileNotFoundException {
-        JsonElement gameFile = JsonParser.parseReader(new FileReader("resources/gameFile.json"));
-        JsonObject gameFileObj = gameFile.getAsJsonObject();
-        Set<String> keySet = gameFileObj.keySet();
-        List<String> keyList = new ArrayList<>(keySet);
+    public static List<String> readJsonFile() {
+        List<String> keyList = null;
+        try {
+            JsonElement gameFile = JsonParser.parseReader(new FileReader("resources/gameFile.json"));
+            JsonObject gameFileObj = gameFile.getAsJsonObject();
+            Set<String> keySet = gameFileObj.keySet();
+            keyList = new ArrayList<>(keySet);
 
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         return keyList;
     }
+
 
 
     //resume game in startWindow
