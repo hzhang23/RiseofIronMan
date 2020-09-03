@@ -39,7 +39,8 @@ public class StartWindow extends JFrame {
       resumeBtn.addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {
-//              new gameFileWindow();
+                GameFileWindow window = new GameFileWindow();
+                window.generateWindow();
           }
       });
       exitBtn = new JButton("Exit");
