@@ -9,9 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 public class GameWindow extends JFrame {
     // a window with 2 static display: bg picture and dialogue box
@@ -35,10 +34,12 @@ public class GameWindow extends JFrame {
         bgPanel.add(bgLabel);
 
         //TODO: when load Json file, slice the path of scene picture to the value of sceneLabel
-        sceneLabel = new JLabel("This is a placeholder for scene Picture");
+        JsonObject scene = StoryTeller.getStory(new File("resources/story.json"));
+        String imgPath = scene.get("0").getAsJsonObject().get("img").getAsString();
+        ImageIcon sceneImg = new ImageIcon(imgPath);
+        sceneLabel = new JLabel(sceneImg);
         sceneLabel.setBounds(200, 50, 1000, 400);
         sceneLabel.setOpaque(true);
-        sceneLabel.setBackground(Color.MAGENTA);
 
         chatLabel = new JLabel("This is a placeholder for Json script");
         chatLabel.setBounds(200, 470, 800, 180);
@@ -49,9 +50,17 @@ public class GameWindow extends JFrame {
         nextBtn.setBounds(1050, 470,150,180);
         nextBtn.setBackground(Color.GREEN);
         nextBtn.addActionListener(new ActionListener() {
-            @Override
+            int i = 0;
             public void actionPerformed(ActionEvent e) {
-                runGameScript(new File("resources/story.json"));
+                //runGameScript(new File("resources/story.json"));
+                JsonObject myStoryJson = StoryTeller.getStory(new File("resources/story.json"));
+                ArrayList<String> lines = getListStrFromJson(myStoryJson, "0");
+                if (i < lines.size()) {
+                    chatLabel.setText(lines.get(i));
+                    i++;
+                } else {
+                    playerChoice();
+                }
             }
         });
 
@@ -76,29 +85,31 @@ public class GameWindow extends JFrame {
 
     }
 
-    public void runGameScript(File path){
-        //Done: load Json file
-        JsonObject myStoryJson = StoryTeller.getStory(path);
-        // slice through Json file
-        String vO = runScriptFrame(myStoryJson, "0");
-        // click button to change text
-
-        chatLabel.setText(vO);
+    public void playerChoice() {
+        JsonObject scene = StoryTeller.getStory(new File("resources/story.json"));
+        JsonObject thisScene = scene.get("0").getAsJsonObject();
+        JsonObject playerReact = thisScene.get("Player").getAsJsonObject();
+        String playerVoice = playerReact.get("voice").getAsString();
+        chatLabel.setText(playerVoice);
+        JButton ABtn = new JButton("A");
+        ABtn.setBounds(300, 600, 100, 30);
+        layeredPane.add(ABtn,JLayeredPane.POPUP_LAYER);
+        JButton BBtn = new JButton("B");
+        BBtn.setBounds(450, 600, 100, 30);
+        layeredPane.add(BBtn,JLayeredPane.POPUP_LAYER);
     }
 
-    public String runScriptFrame(JsonObject script, String scene){
-        JsonObject thisScene = script.get(scene).getAsJsonObject();
-        // give me a string called "Justin Lamb"
-        String voiceOver = thisScene.get("voice over").getAsString();
-        return voiceOver;
-    }
+
 
     public ArrayList<String> getListStrFromJson (JsonObject script, String scene){
         ArrayList<String> linesToShow = new ArrayList<>();
-
-
-
-
+        JsonObject thisScene = script.get(scene).getAsJsonObject();
+        Set<String> voiceKey = thisScene.keySet();
+        for (String key : voiceKey) {
+            if (!key.equals("Player") && !key.equals("img")) {
+                linesToShow.add(thisScene.get(key).getAsString());
+            }
+        }
         return linesToShow;
     }
 
