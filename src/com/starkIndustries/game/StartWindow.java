@@ -74,9 +74,6 @@ public class StartWindow extends JFrame {
       });
   }
 
-
-
-
     public static void main(String[] args) {
         new StartWindow();
     }

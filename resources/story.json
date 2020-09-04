@@ -295,36 +295,36 @@
   },
   "fail": {
     "voice over": "Game over, you have Died!!",
-    "img": "resources/scenePics/scene0.png"
+    "img": "resources/scenePics/fail.jpg"
   },
   "fail2": {
     "voice over": "Game over, the soliders have killed you!!",
-    "img": "resources/scenePics/scene0.png"
+    "img": "resources/scenePics/fail2.gif"
   },
 
   "fail3": {
-    "voice over": "Tony completes missle, Then is killed by enemies, GAMEOVER!!",
-    "img": "resources/scenePics/scene0.png"
+    "voice over": "Tony completes missile, Then is killed by enemies, GAMEOVER!!",
+    "img": "resources/scenePics/fail3.gif"
   },
   "fail4": {
     "voice over": "Raza catches you trying on suit, Kills you both. GAME OVER!!!",
-    "img": "resources/scenePics/scene0.png"
+    "img": "resources/scenePics/fail4.jpg"
   },
   "fail5": {
     "voice over": "You have to fight back!! Game over",
-    "img": "resources/scenePics/scene0.png"
+    "img": "resources/scenePics/fail5.jpg"
   },
   "fail6": {
     "voice over": "The suit is unrepairable, The heat gets to Tony. He dies, GAME OVER!!",
-    "img": "resources/scenePics/scene0.png"
+    "img": "resources/scenePics/fail7.png"
   },
   "fail7": {
     "voice over": "The Helio is your only escape!! You can't surive the heat!! GAME OVER!!",
-    "img": "resources/scenePics/scene0.png"
+    "img": "resources/scenePics/fail8.jpg"
   },
   "fail8": {
     "voice over": "Do you want to be IRONMAN or not??? GAME OVER!!",
-    "img": "resources/scenePics/scene0.png"
+    "img": "resources/scenePics/fail9.jpg"
   }
 }
 
