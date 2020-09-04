@@ -33,7 +33,7 @@
   "2": {
     "voice over":"In shock to Tony's response, Yinsen turns away from Tony",
     "NPC":"Yinsen: You know I could be some help to you Tony, you should be more friendly",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene2.jpg",
     "Player": {
       "voice": "I'm connected to a battery: A: Ask Yinsen what it is   B: Remove it from your body",
       "reply": {
@@ -47,7 +47,7 @@
     "NPC": "Yinsen: That is an electromagnet, hooked up to a car battery, and it's keeping the shrapnel from entering your heart. Hmm? That's right. Smile. We met once, you know, at a technical conference in Bern.",
     "voice over2": "Loud voices sound from the another side of the metal door as they open it.",
     "NPC2": "Yinsen: Come on, stand up. Stand up! Just do as I do. Come on, put your hands up",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene3.jpg",
     "Player":{
       "voice": "You notice the men with guys, the guns belong to you. What do you want to do: A: Stand up;  B: Remain seated \"",
       "reply": {
@@ -61,7 +61,7 @@
     "Solider": "Solider: Welcome, Tony Stark, the most famous mass murderer in the history of America, you will build a Jericho Missile for us, like the one you demostrated",
     "NPC2": "Yinsen: Tony, you must, they will kill us both",
     "voice over": "Tony begins to think of a plan, he gazes over to Yinsen,",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene4.jpg",
     "Player": {
       "voice": "What do you want to do: A: Agree to build Jericho Missile;  B: Refuse ",
       "reply": {
@@ -73,7 +73,7 @@
   "5": {
     "NPC": "Yinsen: I'm sure they're looking for you, Stark. But they will never find you in these mountains. Look, what you just saw, that is your legacy, Stark. Your life's work, in the hands of those murderers. Is that how you want to go out? Is this the last act of defiance of the great Tony Stark? Or are you going to do something about it?",
     "voice over": "Moving closer to the fire, Tony rubs his chest where the he thinks about his legacy",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene5.png",
     "Player": {
       "voice": "What will you do: A: Create a plan with Yinsen to escape B: Give up and build Jerchio missle",
       "reply": {
@@ -86,7 +86,7 @@
   "6": {
     "voice over": "Tony and Yinsen sit together by the fire, quietly going over there master plan to escape",
     "NPC": "Yinsen: Tony this is billant, Do you think you have the right materials?",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene6.jpg",
     "Player": {
       "voice": "Do you beleive you can build a Armored suit with weapons? A: I can build anything, I'm Tony Stark B: This plan will not work",
       "reply": {
@@ -96,9 +96,9 @@
     }
   },
   "7": {
-    "voice over": "As Tony and Yinsen discuss the plan, Tony starts to make a list of conpomtants to build the Armored suit",
+    "voice over": "As Tony and Yinsen discuss the plan, Tony starts to make a list of conpontants to build the Armored suit",
     "NPC": "Yinesen: What is this?",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene7.jpg",
     "Player": {
       "voice": "This is our way out of here! A: Unroll drawings to show the plan B: Keep the plan a secret for now",
       "reply": {
@@ -113,7 +113,7 @@
     "voice over": "As Tony and Yinsen begin to collect and discuss plans to escape footsteps are heard approaching",
     "NPC": "Yinesen: Quick roll up the plans, cover the materials",
     "NPC2": "Raza: Tony Stark!! Having you build my misslies will please the 10 Rings! Soon the whole world will bow before us.",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene8.jpg",
     "Player": {
       "voice": "Tony ponders his thoughts before replying A: What is the 10 Rings B: What are these missiles for?",
       "reply": {
@@ -125,7 +125,7 @@
   },
   "9": {
     "NPC": "Yinesen: Tony you must start trusting me for this plan to work!",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene9.jpg",
     "Player": {
       "voice": "You're right Yinesen I should start trusting you  A: Show Yinsen the plans B: Tell Yinesesn he'll find out soon.",
       "reply": {
@@ -136,7 +136,7 @@
   },
   "10":{
     "NPC": "Raza: The 10 rings have been around before MANKIND!! We have inflitrated every body of you Americas pityful goverment; We are a organization of faith, you will soon see Tony",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene10.jpg",
     "Player": {
       "voice": "What are you planning? What are these missles for? A: Ask Raza what the missles are for B: What is the purpose of this?",
       "reply": {
@@ -146,10 +146,10 @@
     }
   },
   "11": {
-    "voice over": "As Raza contiues the story of the 10 rings Tony begins to reliaze how inportant his plan to esacpe is",
+    "voice over": "As Raza contiues the story of the 10 rings Tony begins to realize how important his plan to escape is",
     "voice over2": "6 days later",
     "NPC": "Yinesen: Tony....Tony! We have did it! The suit is almost complete",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene11.jpg",
     "Player": {
       "voice": "This is it...we did it. Time to move to the next steps A: Try suit on B: Begin to plan the attack",
       "reply": {
@@ -162,7 +162,7 @@
     "voice over": "With numbered days Raza and the 10 rings expect their weapons to be complete.",
     "NPC": "Raza: Tony Tony Tony, we must see these missles soon, our mission is approaching soon!!!",
     "NPC": "Yinesen: It's time! we must stop this now!!",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene12.jpg",
     "Player": {
       "voice": "It's time for some payback! A:Put Armored suit on and escape B:Hide scared from the fight",
       "reply": {
