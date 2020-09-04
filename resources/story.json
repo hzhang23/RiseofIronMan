@@ -176,7 +176,7 @@
     "NPC": "Yinesen: We must hurry we must complete the power sequence.It's loading, I'll but us more time!!",
     "voice over": "Yinesen grabs a weapon and begins firing. Keeping the eneimes back long enough for the suit to be ready.",
     "NPC": "Raza: What is this Tony? You think you can outsmart the 10 rings!?",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene13.png",
     "Player": {
       "voice": "Yea pal, I think I can! A: Use the Armored suit and lanch attack to escape B: Kill Raza and go save Yinesen.",
       "reply": {
@@ -188,7 +188,7 @@
   "14": {
     "voice over": "The Battle begins! Tony shoots a missle towards Raza, The blast throws him. Tony starts towards Yinesen when a group of soliders start firing.",
     "NPC": "Solider: Give up Tony you'll never escape!",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene14.png",
     "Player": {
       "voice": "Lets see how you feel about this A: fire flame thrower at soliders B: Throw a haymaker at the solider.",
       "reply": {
@@ -200,7 +200,7 @@
   "15": {
     "voice over": "The Battle begins! Tony shoots a missle towards Raza, The blast throws him. Tony starts towards Yinesen when a group of soliders start firing.",
     "NPC": "Solider: Give up Tony you'll never escape!",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene15.png",
     "Player": {
       "voice": "Lets see how you feel about this A: fire flame thrower at soliders B: Throw a haymaker at the solider.",
       "reply": {
@@ -214,7 +214,7 @@
     "NPC": "Yinesen: Tony...Tony, I'm here",
     "voice over2": "As Tony approaches he sees Yinesen is mortialy wounded.",
     "NPC2": "Yinesen: Tony, I'm going to see my family, I want this. You have your life. Don't waste it...don't waste it.",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene16.png",
     "Player": {
       "voice": "Thank you for saving me. A: Begin to Assault your way out of the cave.",
       "reply": {
@@ -224,7 +224,7 @@
   },
   "17": {
     "voice over": "Yinsen dies. Tony turns angry. There are men waiting outside of the mouth of the cave. They all shoot at Tony in the suit, but don't do any damage",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene17.png",
     "Player": {
       "voice": "My turn!! A: Use Flamethrower B: Use metal arms and fist to attack.",
       "reply": {
@@ -235,7 +235,7 @@
   },
   "18": {
     "voice over":"Tony shoots fire at the men and their camp from his suit. The men continue to shoot at Tony, beginning to cause damage to the suit. Tony flips a suit and shoots up in the air. He screams as he falls into the sand on the other side of the mountains. The suit breaks when he lands.",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene18.png",
     "Player":{
       "voice": "Not bad at all. A: sit in the sand and take a break B: Attempt to put suit back together.",
       "reply": {
@@ -246,7 +246,7 @@
   },
   "19": {
     "voice over":"Tony shoots fire at the men and their camp from his suit. The men continue to shoot at Tony, beginning to cause damage to the suit. Tony flips a suit and shoots up in the air. He screams as he falls into the sand on the other side of the mountains. The suit breaks when he lands.",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene19.png",
     "Player":{
       "voice": "Not bad at all. A: sit in the sand and take a break B: Attempt to put suit back together.",
       "reply": {
@@ -257,7 +257,7 @@
   },
   "20": {
     "voice over": "Tony then is seen wondering through the desert, exhausted. Military helicopters fly up from behind him.",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene20.png",
     "Player": {
       "voice": "Oh damn who is this? A: Start waving down helicopters B: Hide in the sand.",
       "reply": {
@@ -268,7 +268,7 @@
   },
   "21": {
     "voice over": "As one of the helicopters lands, Tony collapses to his knees, holding up a peace sign. Rhodes and a few men are seen running up to Tony from the helicopter",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene21.png",
     "NPC": "James Rhodes: How was vaction? Next time you're riding with me",
     "Player": {
       "voice": " Took you long enough A: reach for Rhodes hand, It's time to go home",
@@ -280,7 +280,7 @@
   "22": {
     "voice over": "Now that Tony is home and safe he begins to realize he has a bigger purpose in life. As he gets ready for a press conference Rhodes begins to pressure to not tell anyone about the suit.",
     "NPC": "James Rhodes: Tony you just can't. Do you realize what this would look like in the public eye?",
-    "img": "resources/scenePics/scene0.png",
+    "img": "resources/scenePics/scene22.png",
     "Player": {
       "voice": "Listen Rhodes I have to change my legacy, I have to do something better for the name Stark. A: tell the world B: Keep it a secret.",
       "reply": {
