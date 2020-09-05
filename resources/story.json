@@ -7,8 +7,8 @@
   },
 
   "0": {
-    "voice over": "You are Tony Stark, a billionare that is trapped in a cave by terrorist, you need to stay alive and find a way to escape. there is fire pit in front of you and a person is standing by the fire pit and he is talking",
-    "Yinsen": "Yinsen: I won't move if I were you",
+    "voice over": "You are Tony Stark, a billionaire that is trapped in a cave by terrorist, you need to stay alive and find a way to escape... There is a fire pit in front of you and a person is standing by the fire pit and he is talking.",
+    "Yinsen": "Yinsen: I wouldn't move if I were you.",
     "img": "resources/scenePics/scene0.png",
     "Player": {
         "voice": "What would you reply?  A: Can you help me?    B: What the hell did you do to me??",
@@ -19,8 +19,8 @@
     }
   },
   "1": {
-    "voice over": "Tony realizes that he is connected to a battery. He rips off the bandages over his chest to see an electromagnet in his chest",
-    "NPC": "Yinsen: I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs",
+    "voice over": "Tony realizes that he is connected to a battery. He rips off the bandages over his chest to see an electromagnet in his chest.",
+    "NPC": "Yinsen: I removed all the shrapnel I could, but there's a lot left, and it's headed into your atrial septum. Here, want to see? [Pulls out a bottle of shrapnel.] I have a souvenir. Take a look. [Tosses the bottle to Tony] I've seen many wounds like that in my village. We call them the walking dead because it takes about a week for the barbs to reach the vital organs.",
     "img": "resources/scenePics/scene1.png",
     "Player": {
       "voice": "I'm connected to a battery: A: Ask Yinsen what it is   B: Remove it from your body",
@@ -31,8 +31,8 @@
     }
   },
   "2": {
-    "voice over":"In shock to Tony's response, Yinsen turns away from Tony",
-    "NPC":"Yinsen: You know I could be some help to you Tony, you should be more friendly",
+    "voice over":"In shock to Tony's response, Yinsen turns away from Tony.",
+    "NPC":"Yinsen: You know I could be some help to you Tony, you should be more friendly.",
     "img": "resources/scenePics/scene2.jpg",
     "Player": {
       "voice": "I'm connected to a battery: A: Ask Yinsen what it is   B: Remove it from your body",
@@ -49,7 +49,7 @@
     "NPC2": "Yinsen: Come on, stand up. Stand up! Just do as I do. Come on, put your hands up",
     "img": "resources/scenePics/scene3.jpg",
     "Player":{
-      "voice": "You notice the men with guys, the guns belong to you. What do you want to do: A: Stand up;  B: Remain seated \"",
+      "voice": "You notice men with guns, and those guns belong to you. What do you want to do: A: Stand up  B: Remain seated \"",
       "reply": {
         "A": "4",
         "B": "fail"
@@ -58,12 +58,12 @@
 
   },
   "4": {
-    "Solider": "Solider: Welcome, Tony Stark, the most famous mass murderer in the history of America, you will build a Jericho Missile for us, like the one you demostrated",
+    "Solider": "Solider: Welcome, Tony Stark, the most famous mass murderer in the history of America, you will build a Jericho Missile for us, like the one you demonstrated",
     "NPC2": "Yinsen: Tony, you must, they will kill us both",
-    "voice over": "Tony begins to think of a plan, he gazes over to Yinsen,",
+    "voice over": "Tony begins to think of a plan, he gazes over to Yinsen...",
     "img": "resources/scenePics/scene4.jpg",
     "Player": {
-      "voice": "What do you want to do: A: Agree to build Jericho Missile;  B: Refuse ",
+      "voice": "What do you want to do: A: Agree to build Jericho Missile  B: Refuse ",
       "reply": {
         "A":"5",
         "B": "fail2"
@@ -72,10 +72,10 @@
   },
   "5": {
     "NPC": "Yinsen: I'm sure they're looking for you, Stark. But they will never find you in these mountains. Look, what you just saw, that is your legacy, Stark. Your life's work, in the hands of those murderers. Is that how you want to go out? Is this the last act of defiance of the great Tony Stark? Or are you going to do something about it?",
-    "voice over": "Moving closer to the fire, Tony rubs his chest where the he thinks about his legacy",
+    "voice over": "Moving closer to the fire, Tony rubs his chest where the he thinks about his legacy...",
     "img": "resources/scenePics/scene5.png",
     "Player": {
-      "voice": "What will you do: A: Create a plan with Yinsen to escape B: Give up and build Jerchio missle",
+      "voice": "What will you do: A: Create a plan with Yinsen to escape B: Give up and build Jericho missile",
       "reply": {
         "A": "6",
         "B": "fail"
@@ -84,11 +84,11 @@
 
   },
   "6": {
-    "voice over": "Tony and Yinsen sit together by the fire, quietly going over there master plan to escape",
-    "NPC": "Yinsen: Tony this is billant, Do you think you have the right materials?",
+    "voice over": "Tony and Yinsen sit together by the fire, quietly going over their master plan to escape.",
+    "NPC": "Yinsen: Tony this is brilliant! Do you think you have the right materials?",
     "img": "resources/scenePics/scene6.jpg",
     "Player": {
-      "voice": "Do you beleive you can build a Armored suit with weapons? A: I can build anything, I'm Tony Stark B: This plan will not work",
+      "voice": "Do you believe you can build an armored suit with weapons? A: I can build anything, I'm Tony Stark B: This plan will not work",
       "reply": {
         "A":"7",
         "B": "fail3"
@@ -96,8 +96,8 @@
     }
   },
   "7": {
-    "voice over": "As Tony and Yinsen discuss the plan, Tony starts to make a list of conpontants to build the Armored suit",
-    "NPC": "Yinesen: What is this?",
+    "voice over": "As Tony and Yinsen discuss the plan, Tony starts to make a list of components to build the Armored suit.",
+    "NPC": "Yinsen: What is this?",
     "img": "resources/scenePics/scene7.jpg",
     "Player": {
       "voice": "This is our way out of here! A: Unroll drawings to show the plan B: Keep the plan a secret for now",
@@ -110,12 +110,12 @@
   },
 
   "8": {
-    "voice over": "As Tony and Yinsen begin to collect and discuss plans to escape footsteps are heard approaching",
-    "NPC": "Yinesen: Quick roll up the plans, cover the materials",
-    "NPC2": "Raza: Tony Stark!! Having you build my misslies will please the 10 Rings! Soon the whole world will bow before us.",
+    "voice over": "As Tony and Yinsen begin to collect and discuss plans to escape, footsteps are heard approaching...",
+    "NPC": "Yinsen: Quick roll up the plans, cover the materials",
+    "NPC2": "Raza: Tony Stark!! Having you build my missiles will please the 10 Rings! Soon the whole world will bow before us.",
     "img": "resources/scenePics/scene8.jpg",
     "Player": {
-      "voice": "Tony ponders his thoughts before replying A: What is the 10 Rings B: What are these missiles for?",
+      "voice": "Tony ponders his thoughts before replying A: What is the 10 Rings? B: What are these missiles for?",
       "reply": {
         "A": "10",
         "B": "11"
@@ -124,10 +124,10 @@
 
   },
   "9": {
-    "NPC": "Yinesen: Tony you must start trusting me for this plan to work!",
+    "NPC": "Yinsen: Tony you must start trusting me for this plan to work!",
     "img": "resources/scenePics/scene9.jpg",
     "Player": {
-      "voice": "You're right Yinesen I should start trusting you  A: Show Yinsen the plans B: Tell Yinesesn he'll find out soon.",
+      "voice": "You're right Yinsen I should start trusting you  A: Show Yinsen the plans B: Tell Yinsen he'll find out soon",
       "reply": {
         "A": "8",
         "B": "8"
@@ -135,10 +135,10 @@
     }
   },
   "10":{
-    "NPC": "Raza: The 10 rings have been around before MANKIND!! We have inflitrated every body of you Americas pityful goverment; We are a organization of faith, you will soon see Tony",
+    "NPC": "Raza: The 10 rings have been around before MANKIND!! We have infiltrated the Americans' pitiful government; We are an organization of faith, you will soon see Tony.",
     "img": "resources/scenePics/scene10.jpg",
     "Player": {
-      "voice": "What are you planning? What are these missles for? A: Ask Raza what the missles are for B: What is the purpose of this?",
+      "voice": "What are you planning? What are these missiles for? A: Ask Raza what the missiles are for B: What is the purpose of this?",
       "reply": {
         "A": "11",
         "B": "11"
@@ -146,12 +146,12 @@
     }
   },
   "11": {
-    "voice over": "As Raza contiues the story of the 10 rings Tony begins to realize how important his plan to escape is",
-    "voice over2": "6 days later",
-    "NPC": "Yinesen: Tony....Tony! We have did it! The suit is almost complete",
+    "voice over": "As Raza continues the story of the 10 rings, Tony begins to realize how important his plan to escape is.",
+    "voice over2": "6 days later...",
+    "NPC": "Yinsen: Tony....Tony! We have did it! The suit is almost complete!",
     "img": "resources/scenePics/scene11.jpg",
     "Player": {
-      "voice": "This is it...we did it. Time to move to the next steps A: Try suit on B: Begin to plan the attack",
+      "voice": "This is it...we did it. Time to move to the next steps! A: Try suit on B: Begin to plan the attack",
       "reply": {
       "A": "12",
       "B": "fail4"
@@ -159,9 +159,9 @@
     }
   },
   "12": {
-    "voice over": "With numbered days Raza and the 10 rings expect their weapons to be complete.",
-    "NPC": "Raza: Tony Tony Tony, we must see these missles soon, our mission is approaching soon!!!",
-    "NPC": "Yinesen: It's time! we must stop this now!!",
+    "voice over": "Within numbered days, Raza and the 10 rings expect their weapons to be complete.",
+    "NPC": "Raza: Tony Tony Tony, we must see these missiles soon, our mission is approaching soon!!!",
+    "NPC": "Yinsen: It's time! we must stop this now!!",
     "img": "resources/scenePics/scene12.jpg",
     "Player": {
       "voice": "It's time for some payback! A:Put Armored suit on and escape B:Hide scared from the fight",
@@ -172,13 +172,13 @@
     }
   },
   "13": {
-    "voice over": "With time counting down, Tony and Yinesen begin to assembly the suit on Tony. Simultanesuly Raza sees somthing Suspicious on Camera, he send soilders to go check.",
-    "NPC": "Yinesen: We must hurry we must complete the power sequence.It's loading, I'll but us more time!!",
-    "voice over": "Yinesen grabs a weapon and begins firing. Keeping the eneimes back long enough for the suit to be ready.",
+    "voice over": "With time counting down, Tony and Yinsen begin to assemble the suit on Tony. Simultaneously, Raza sees something suspicious on camera, he send soldiers to go check...",
+    "NPC": "Yinsen: We must hurry, we must complete the power sequence. It's loading, I'll buy us more time!!",
+    "voice over": "Yinsen grabs a weapon and begins firing. Keeping the enemies back long enough for the suit to be ready.",
     "NPC": "Raza: What is this Tony? You think you can outsmart the 10 rings!?",
     "img": "resources/scenePics/scene13.png",
     "Player": {
-      "voice": "Yea pal, I think I can! A: Use the Armored suit and lanch attack to escape B: Kill Raza and go save Yinesen.",
+      "voice": "Yea pal, I think I can! A: Use the armored suit and launch attack to escape B: Kill Raza and go save Yinsen.",
       "reply": {
         "A": "14",
         "B": "15"
@@ -186,11 +186,11 @@
     }
   },
   "14": {
-    "voice over": "The Battle begins! Tony shoots a missle towards Raza, The blast throws him. Tony starts towards Yinesen when a group of soliders start firing.",
-    "NPC": "Solider: Give up Tony you'll never escape!",
+    "voice over": "The Battle begins! Tony shoots a missile towards Raza, The blast throws him. Tony runs towards Yinsen when a group of soldiers start firing.",
+    "NPC": "Solider: Give up Tony! You'll never escape!",
     "img": "resources/scenePics/scene14.png",
     "Player": {
-      "voice": "Lets see how you feel about this A: fire flame thrower at soliders B: Throw a haymaker at the solider.",
+      "voice": "Let's see how you feel about this A: Fire flame thrower at soldiers B: Throw a haymaker at the solider.",
       "reply": {
         "A": "16",
         "B": "17"
@@ -198,11 +198,11 @@
     }
   },
   "15": {
-    "voice over": "The Battle begins! Tony shoots a missle towards Raza, The blast throws him. Tony starts towards Yinesen when a group of soliders start firing.",
-    "NPC": "Solider: Give up Tony you'll never escape!",
+    "voice over": "The Battle begins! Tony shoots a missile towards Raza, The blast throws him. Tony runs towards Yinsin when a group of soldiers start firing.",
+    "NPC": "Solider: Give up Tony! You'll never escape!",
     "img": "resources/scenePics/scene15.png",
     "Player": {
-      "voice": "Lets see how you feel about this A: fire flame thrower at soliders B: Throw a haymaker at the solider.",
+      "voice": "Let's see how you feel about this A: Fire flame thrower at soldiers B: Throw a haymaker at the solider.",
       "reply": {
         "A": "16",
         "B": "17"
@@ -210,23 +210,23 @@
     }
   },
   "16": {
-    "voice over": "Tony moves forward wondering through the cave searching for Yinesen.",
-    "NPC": "Yinesen: Tony...Tony, I'm here",
-    "voice over2": "As Tony approaches he sees Yinesen is mortialy wounded.",
-    "NPC2": "Yinesen: Tony, I'm going to see my family, I want this. You have your life. Don't waste it...don't waste it.",
+    "voice over": "Tony moves forward, wandering through the cave searching for Yinsen.",
+    "NPC": "Yinsen: Tony...Tony, I'm here",
+    "voice over2": "As Tony approaches he sees Yinsen is badly wounded.",
+    "NPC2": "Yinsen: Tony, I'm going to see my family, I want this. You have your life. Don't waste it...don't waste it.",
     "img": "resources/scenePics/scene16.png",
     "Player": {
-      "voice": "Thank you for saving me. A: Begin to Assault your way out of the cave.",
+      "voice": "Thank you for saving me. A: Begin to assault your way out of the cave.",
       "reply": {
         "A": "17"
       }
     }
   },
   "17": {
-    "voice over": "Yinsen dies. Tony turns angry. There are men waiting outside of the mouth of the cave. They all shoot at Tony in the suit, but don't do any damage",
+    "voice over": "Yinsen dies. Tony turns angry. There are men waiting outside of the mouth of the cave. They all shoot at Tony in the suit, but didn't cause any damage...",
     "img": "resources/scenePics/scene17.png",
     "Player": {
-      "voice": "My turn!! A: Use Flamethrower B: Use metal arms and fist to attack.",
+      "voice": "My turn!! A: Use Flamethrower B: Use metal arms and fist to attack",
       "reply": {
         "A": "18",
         "B": "19"
@@ -237,7 +237,7 @@
     "voice over":"Tony shoots fire at the men and their camp from his suit. The men continue to shoot at Tony, beginning to cause damage to the suit. Tony flips a suit and shoots up in the air. He screams as he falls into the sand on the other side of the mountains. The suit breaks when he lands.",
     "img": "resources/scenePics/scene18.png",
     "Player":{
-      "voice": "Not bad at all. A: sit in the sand and take a break B: Attempt to put suit back together.",
+      "voice": "Not bad at all. A: Sit in the sand and take a break B: Attempt to put suit back together",
       "reply": {
         "A": "20",
         "B": "21"
@@ -248,7 +248,7 @@
     "voice over":"Tony shoots fire at the men and their camp from his suit. The men continue to shoot at Tony, beginning to cause damage to the suit. Tony flips a suit and shoots up in the air. He screams as he falls into the sand on the other side of the mountains. The suit breaks when he lands.",
     "img": "resources/scenePics/scene19.png",
     "Player":{
-      "voice": "Not bad at all. A: sit in the sand and take a break B: Attempt to put suit back together.",
+      "voice": "Not bad at all. A: Sit in the sand and take a break B: Attempt to put suit back together",
       "reply": {
         "A": "20",
         "B": "fail6"
@@ -259,7 +259,7 @@
     "voice over": "Tony then is seen wondering through the desert, exhausted. Military helicopters fly up from behind him.",
     "img": "resources/scenePics/scene20.png",
     "Player": {
-      "voice": "Oh damn who is this? A: Start waving down helicopters B: Hide in the sand.",
+      "voice": "Oh damn who is this? A: Start waving down helicopters B: Hide in the sand",
       "reply": {
         "A": "21",
         "B": "fail7"
@@ -267,22 +267,22 @@
     }
   },
   "21": {
-    "voice over": "As one of the helicopters lands, Tony collapses to his knees, holding up a peace sign. Rhodes and a few men are seen running up to Tony from the helicopter",
+    "voice over": "As one of the helicopters lands, Tony collapses to his knees, holding up a peace sign. Rhodes and a few men are seen running up to Tony from the helicopter.",
     "img": "resources/scenePics/scene21.png",
-    "NPC": "James Rhodes: How was vaction? Next time you're riding with me",
+    "NPC": "James Rhodes: How was vacation? Next time you're riding with me!",
     "Player": {
-      "voice": " Took you long enough A: reach for Rhodes hand, It's time to go home",
+      "voice": " Took you long enough A: Reach for Rhodes' hand, it's time to go home",
       "reply": {
         "A": "22"
       }
     }
   },
   "22": {
-    "voice over": "Now that Tony is home and safe he begins to realize he has a bigger purpose in life. As he gets ready for a press conference Rhodes begins to pressure to not tell anyone about the suit.",
+    "voice over": "Now that Tony is home and safe he begins to realize he has a bigger purpose in life. As he gets ready for a press conference, Rhodes begins to pressure him not tell anyone about the suit.",
     "NPC": "James Rhodes: Tony you just can't. Do you realize what this would look like in the public eye?",
     "img": "resources/scenePics/scene22.png",
     "Player": {
-      "voice": "Listen Rhodes I have to change my legacy, I have to do something better for the name Stark. A: tell the world B: Keep it a secret.",
+      "voice": "Listen Rhodes I have to change my legacy, I have to do something better for the name Stark. A: Tell the world B: Keep it a secret",
       "reply": {
         "A": "23",
         "B": "fail8"
@@ -298,12 +298,12 @@
     "img": "resources/scenePics/fail.jpg"
   },
   "fail2": {
-    "voice over": "Game over, the soliders have killed you!!",
+    "voice over": "Game over, the soldiers have killed you!!",
     "img": "resources/scenePics/fail2.gif"
   },
 
   "fail3": {
-    "voice over": "Tony completes missile, Then is killed by enemies, GAMEOVER!!",
+    "voice over": "Tony completes missile, then is killed by enemies, GAME OVER!!",
     "img": "resources/scenePics/fail3.gif"
   },
   "fail4": {
@@ -319,7 +319,7 @@
     "img": "resources/scenePics/fail7.png"
   },
   "fail7": {
-    "voice over": "The Helio is your only escape!! You can't surive the heat!! GAME OVER!!",
+    "voice over": "The helo is your only escape!! You can't survive the heat!! GAME OVER!!",
     "img": "resources/scenePics/fail8.jpg"
   },
   "fail8": {
