@@ -1,6 +1,9 @@
 package com.starkIndustries.game;
 
 import com.google.gson.JsonObject;
+import com.starkIndustries.fight.FightScene;
+import com.starkIndustries.fight.Player;
+import com.starkIndustries.fight.TonyStark;
 
 import javax.swing.*;
 import java.awt.*;
@@ -94,8 +97,33 @@ public class GameWindow extends JFrame {
                     // Adding "Fight" Button
                     if (scene.equals("3")) {
                         JButton fightBtn = new JButton("Fight the Enemy");
+
+                        fightBtn.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                FightScene newScene = new FightScene();
+                                newScene.generateWindow();
+//                                chatArea.setText("You have chosen to fight... \n");
+//                                Player tonyStark = new Player("Tony Stark", 10, 20, 10, 5);
+//                                Player guard = new Player ("Guard", 100, 80, 60, 10);
+//                                while (true){
+//                                    tonyStark.attack(guard);
+//                                    if(!guard.isLiving(tonyStark)){
+//                                        chatArea.append("You've beaten up the guards!");
+//                                        break;
+//                                    }
+//                                    guard.attack(tonyStark);
+//                                    if(!tonyStark.isLiving(guard)){
+//                                        chatArea.append("The guards are too strong, you lost!");
+//                                        break;
+//                                    }
+//                                }
+                            }
+                        });
+
                         fightBtn.setBounds(600, 600, 200, 50);
                         layeredPane.add(fightBtn, JLayeredPane.POPUP_LAYER);
+
                     }
                 }
             }
@@ -137,6 +165,6 @@ public class GameWindow extends JFrame {
     }
 
     public static void main(String[] args) {
-        new GameWindow("0");
+        new GameWindow("3");
     }
 }

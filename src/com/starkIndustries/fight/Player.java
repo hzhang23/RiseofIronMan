@@ -25,8 +25,8 @@ public class Player {
         }
         npc.hp -= hurt;
         System.out.println(name + " cause " + npc.name + " lose " + hurt + " hp");
-        System.out.println(name + " current hp is " + hp);
-        System.out.println(npc.name + " current hp is " + hp);
+        System.out.println(name + " current hp is " + this.getHp());
+        System.out.println(npc.name + " current hp is " + npc.getHp());
     }
 
     public boolean isLiving(Player npc){

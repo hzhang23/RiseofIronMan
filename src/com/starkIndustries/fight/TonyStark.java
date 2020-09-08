@@ -29,6 +29,6 @@ public class TonyStark extends Player {
     }
 
     public static void main(String[] args) {
-        Player tonyStark = new TonyStark("Tony Stark", 50, 20, 10, 5, true);
+        Player tonyStark = new TonyStark("Tony Stark", 10, 20, 10, 5, false);
     }
 }
