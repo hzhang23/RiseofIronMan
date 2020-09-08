@@ -8,11 +8,11 @@ public class Player {
     private double armor;
 
     //ctor
-    public Player(String name, double hp, double attackUpper, double attachLower, double armor) {
+    public Player(String name, double hp, double attackUpper, double attackLower, double armor) {
         this.name = name;
         this.hp = hp;
         this.attackUpper = attackUpper;
-        this.attackLower = attachLower;
+        this.attackLower = attackLower;
         this.armor = armor;
     }
 
@@ -25,11 +25,11 @@ public class Player {
         }
         npc.hp -= hurt;
         System.out.println(name + " cause " + npc.name + " lose " + hurt + " hp");
-        System.out.println(name + " current hp is " + hp);
-        System.out.println(npc.name + " current hp is " + hp);
+        System.out.println(name + " current hp is " + this.getHp());
+        System.out.println(npc.name + " current hp is " + npc.getHp());
     }
 
-    public boolean live(Player npc){
+    public boolean isLiving(Player npc){
         if (hp <= 0 ){
             System.out.println(name + " is dead" + npc.name + " wins");
             return false;
@@ -42,11 +42,11 @@ public class Player {
         Player raza = new Player ("Raza", 100, 10, 5, 10);
         while (true){
             tonyStark.attack(raza);
-            if(!raza.live(tonyStark)){
+            if(!raza.isLiving(tonyStark)){
                 break;
             }
             raza.attack(tonyStark);
-            if(!tonyStark.live(raza)){
+            if(!tonyStark.isLiving(raza)){
                 break;
             }
         }
@@ -81,8 +81,8 @@ public class Player {
         return attackLower;
     }
 
-    public void setAttachLower(Double attachLower) {
-        this.attackLower = attachLower;
+    public void setAttachLower(Double attackLower) {
+        this.attackLower = attackLower;
     }
 
     public Double getArmor() {

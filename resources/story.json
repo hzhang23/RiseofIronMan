@@ -49,7 +49,7 @@
     "NPC2": "Yinsen: Come on, stand up. Stand up! Just do as I do. Come on, put your hands up",
     "img": "resources/scenePics/scene3.jpg",
     "Player":{
-      "voice": "You notice men with guns, and those guns belong to you. What do you want to do: A: Stand up  B: Remain seated \"",
+      "voice": "You notice men with guns, and those guns belong to you. What do you want to do: A: Stand up  B: Remain seated",
       "reply": {
         "A": "4",
         "B": "fail"
