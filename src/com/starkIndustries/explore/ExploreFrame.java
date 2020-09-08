@@ -20,8 +20,8 @@ public class ExploreFrame extends JFrame {
     boolean isEast; // TenRings living room on map
 
     //Tony config
-    Tony tony = new Tony("Tony Stark");
-    ArrayList<Equipment> arcList = tony.getEquipments();
+    Tony tony = null;
+   // ArrayList<Equipment> arcList = tony.getEquipments();
     Equipment titanium = null;
     Equipment missile = null;
 
@@ -173,35 +173,13 @@ public class ExploreFrame extends JFrame {
     /**
      * methods in ths sections are control panel section
      */
-    /*
     public void pickUpEquipment(){
-        if(!isStart){
-            return;
+
         }
-        titanium = new Equipment("Titanium");
-        missile = new Equipment("missile");
-        if (isWest && !arcList.contains(titanium)){
-            titanium.setOwner(tony);
-            arcList.add(titanium);
-        }else if (isSouth && !arcList.contains(missile)){
-            missile.setOwner(tony);
-            arcList.add(missile);
-        }
-    }
 
 
     public void viewBag(Tony tony){
-        if(!isStart){
-            return;
-        }
-        StringBuilder items = new StringBuilder();
-        if (tony.getEquipments().isEmpty()){
-            items.append(tony.getName() + ", your have nothing on you to build the Arc Reactor\n");
-        } else {
-            items.append(tony.getName() + ", you have following items to build Arc Reactor" + arcList.toString() +
-                    "\n");
-        }
-        gameArea.append("\n" + items);
+
     }
 
     /**

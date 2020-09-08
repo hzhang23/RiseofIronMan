@@ -22,7 +22,7 @@ public class Tony {
     public StringBuilder getStatus(){
         StringBuilder mystatus = new StringBuilder();
         mystatus.append("the battery is drying now...\n");
-        if (equipments.isEmpty()){
+        if (equipments == null){
             mystatus.append("you current materials are: none \n");
         }else{
             mystatus.append("your current materials are:" + equipments);
