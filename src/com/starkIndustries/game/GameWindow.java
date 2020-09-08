@@ -60,6 +60,8 @@ public class GameWindow extends JFrame {
                 } else {
                     String playerVoice = thisScene.get("Player").getAsJsonObject().get("voice").getAsString();
                     chatArea.setText(playerVoice);
+
+                    // Adding "Choice A" Button
                     JButton ABtn = new JButton("A");
                     ABtn.addActionListener(new ActionListener() {
                         String nextScene =
@@ -73,6 +75,8 @@ public class GameWindow extends JFrame {
                     });
                     ABtn.setBounds(300, 600, 100, 50);
                     layeredPane.add(ABtn,JLayeredPane.POPUP_LAYER);
+
+                    // Adding "Choice B" Button
                     JButton BBtn = new JButton("B");
                     BBtn.addActionListener(new ActionListener() {
                         String nextScene =
@@ -86,6 +90,13 @@ public class GameWindow extends JFrame {
                     });
                     BBtn.setBounds(450, 600, 100, 50);
                     layeredPane.add(BBtn,JLayeredPane.POPUP_LAYER);
+
+                    // Adding "Fight" Button
+                    if (scene.equals("3")) {
+                        JButton fightBtn = new JButton("Fight the Enemy");
+                        fightBtn.setBounds(600, 600, 200, 50);
+                        layeredPane.add(fightBtn, JLayeredPane.POPUP_LAYER);
+                    }
                 }
             }
         });

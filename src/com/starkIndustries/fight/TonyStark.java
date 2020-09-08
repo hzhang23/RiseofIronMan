@@ -1,21 +1,16 @@
 package com.starkIndustries.fight;
 
-public class TonyStark {
+public class TonyStark extends Player {
     // instance variables
-    private int healthPoints = 10;
     private boolean isSuitComplete = false;
 
     // ctors
-    public TonyStark(int healthPoints, boolean isSuitComplete) {
-        this.healthPoints = healthPoints;
+    public TonyStark(String name, double hp, double attackUpper, double attackLower, double armor, boolean isSuitComplete) {
+        super(name, hp, attackUpper, attackLower, armor);
         this.isSuitComplete = isSuitComplete;
     }
 
     // instance methods
-    public void fight() {
-        System.out.println("Tony fights");
-    }
-
     public void defend() {
         System.out.println("Tony defends");
     }
@@ -25,19 +20,15 @@ public class TonyStark {
     }
 
     // getters and setters
-    public int getHealthPoints() {
-        return healthPoints;
-    }
-
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
-    }
-
     public boolean isSuitComplete() {
         return isSuitComplete;
     }
 
     public void setSuitComplete(boolean suitComplete) {
         isSuitComplete = suitComplete;
+    }
+
+    public static void main(String[] args) {
+        Player tonyStark = new TonyStark("Tony Stark", 50, 20, 10, 5, true);
     }
 }
