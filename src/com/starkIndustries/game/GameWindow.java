@@ -103,21 +103,6 @@ public class GameWindow extends JFrame {
                             public void actionPerformed(ActionEvent e) {
                                 FightScene newScene = new FightScene();
                                 newScene.generateWindow();
-//                                chatArea.setText("You have chosen to fight... \n");
-//                                Player tonyStark = new Player("Tony Stark", 10, 20, 10, 5);
-//                                Player guard = new Player ("Guard", 100, 80, 60, 10);
-//                                while (true){
-//                                    tonyStark.attack(guard);
-//                                    if(!guard.isLiving(tonyStark)){
-//                                        chatArea.append("You've beaten up the guards!");
-//                                        break;
-//                                    }
-//                                    guard.attack(tonyStark);
-//                                    if(!tonyStark.isLiving(guard)){
-//                                        chatArea.append("The guards are too strong, you lost!");
-//                                        break;
-//                                    }
-//                                }
                             }
                         });
 

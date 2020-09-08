@@ -2,6 +2,8 @@ package com.starkIndustries.fight;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class FightScene extends JFrame {
 
@@ -17,6 +19,9 @@ public class FightScene extends JFrame {
     private JLabel enemyLabel;
 
     private JTextArea fightDescription;
+
+    private TonyStark tonyStark;
+    private NPC npc;
 
     // generate a window
     public void generateWindow() {
@@ -66,7 +71,7 @@ public class FightScene extends JFrame {
         result.setLayout(myLayout);
 
         // add "fight" button
-        JButton fightBtn = new JButton("Fight!");
+        JButton fightBtn = makeFightButton();
         result.add(fightBtn);
 
         // add "run away" button
@@ -75,6 +80,28 @@ public class FightScene extends JFrame {
 
         return result;
     }
+
+    private JButton makeFightButton() {
+        JButton result = new JButton("Fight!");
+        result.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Player tonyStark = new Player("Tony Stark", 10, 20, 10, 5);
+                Player guard = new Player ("Guard", 100, 80, 60, 10);
+                while (tonyStark.isLiving(guard)){
+                    fightDescription.append("Tony Strikes...\n");
+                    tonyStark.attack(guard);
+                    fightDescription.append("Tony's health: " + tonyStark.getHp() + "\n");
+                    fightDescription.append("Enemy Strikes...\n");
+                    guard.attack(tonyStark);
+                    fightDescription.append("Enemy's health: " + guard.getHp() + "\n");
+                }
+
+            }
+        });
+        return result;
+    }
+
 
     // make the fight description
     public JTextArea makeFightDescription() {
@@ -87,7 +114,7 @@ public class FightScene extends JFrame {
         result.setEditable(false);
         result.setOpaque(true);
         result.setBackground(Color.MAGENTA);
-        result.setText("You have chosen to fight...");
+        result.setText("You have chosen to fight...\n");
         return result;
     }
 
