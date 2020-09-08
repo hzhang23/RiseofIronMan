@@ -4,19 +4,19 @@ import javax.swing.*;
 import java.awt.*;
 
 public class FightScene extends JFrame {
-    // fight scene will have two people fighting
 
+    // variables
     private JLayeredPane layeredPane;
     private ImageIcon bgImg = new ImageIcon("resources/StartGameBackground.jpg");
 
-    // panels
     private JPanel bgPanel;
-    private JPanel fightersPanel;
+    private JPanel buttonsPanel;
 
-    // labels
     private JLabel bgLabel;
     private JLabel tonyLabel;
     private JLabel enemyLabel;
+
+    private JTextArea fightDescription;
 
     // generate a window
     public void generateWindow() {
@@ -36,8 +36,8 @@ public class FightScene extends JFrame {
         // bring in a background panel
         bgPanel = makeBackgroundPanel();
 
-        // bring in a fighters panel
-//        fightersPanel = makeButtonsPanel();
+        // bring in a buttons panel
+        buttonsPanel = makeButtonsPanel();
 
         // bring in label for Tony
         tonyLabel = makeTonyLabel();
@@ -45,10 +45,49 @@ public class FightScene extends JFrame {
         // bring in label for enemy
         enemyLabel = makeEnemyLabel();
 
+        // bring in fight description box
+        fightDescription = makeFightDescription();
+
         // "assemble" the layered pane
         result.add(bgPanel, JLayeredPane.DEFAULT_LAYER);
+        result.add(buttonsPanel, JLayeredPane.MODAL_LAYER);
         result.add(tonyLabel, JLayeredPane.MODAL_LAYER);
         result.add(enemyLabel, JLayeredPane.MODAL_LAYER);
+        result.add(fightDescription, JLayeredPane.MODAL_LAYER);
+        return result;
+    }
+
+    private JPanel makeButtonsPanel() {
+        JPanel result = new JPanel();
+        result.setBounds(1000, 370, 300, 280);
+        result.setBackground(Color.lightGray);
+        result.setOpaque(true);
+        GridLayout myLayout = new GridLayout(2, 1);
+        result.setLayout(myLayout);
+
+        // add "fight" button
+        JButton fightBtn = new JButton("Fight!");
+        result.add(fightBtn);
+
+        // add "run away" button
+        JButton runAwayBtn = new JButton("Run Away");
+        result.add(runAwayBtn);
+
+        return result;
+    }
+
+    // make the fight description
+    public JTextArea makeFightDescription() {
+        JTextArea result = new JTextArea();
+        Font font = new Font("Anime Ace 2", Font.BOLD, 24);
+        result.setBounds(100, 370, 700, 280);
+        result.setFont(font);
+        result.setWrapStyleWord(true);
+        result.setLineWrap(true);
+        result.setEditable(false);
+        result.setOpaque(true);
+        result.setBackground(Color.MAGENTA);
+        result.setText("You have chosen to fight...");
         return result;
     }
 
@@ -66,7 +105,7 @@ public class FightScene extends JFrame {
     // make greeting label
     public JLabel makeTonyLabel() {
         JLabel result = new JLabel();
-        result.setText("You have chosen to fight the enemy...");
+        result.setText("Tony Stark image placeholder");
         result.setBounds(100, 100, 300, 200);
         result.setBackground(Color.ORANGE);
         result.setOpaque(true);
