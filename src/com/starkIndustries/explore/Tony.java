@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class Tony {
     private String name;
     private boolean isLive;
-    private ArrayList<Equipment> equipments;
 
 
     //ctor
@@ -17,24 +16,6 @@ public class Tony {
         this.name = name;
         isLive = true;
     }
-
-    //business methods
-    public StringBuilder getStatus(){
-        StringBuilder mystatus = new StringBuilder();
-        mystatus.append("the battery is drying now...\n");
-        if (equipments == null){
-            mystatus.append("you current materials are: none \n");
-        }else{
-            mystatus.append("your current materials are:" + equipments);
-        }
-        return mystatus;
-    }
-
-
-
-
-
-
 
     //getters and setters
     public String getName() {
@@ -51,13 +32,5 @@ public class Tony {
 
     public void setLive(boolean live) {
         isLive = live;
-    }
-
-    public ArrayList<Equipment> getEquipments() {
-        return equipments;
-    }
-
-    public void setEquipments(Equipment equipment) {
-        this.equipments = equipments;
     }
 }
