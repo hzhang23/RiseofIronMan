@@ -20,13 +20,13 @@ public class ExploreFrame extends JFrame {
     boolean isEast; // TenRings living room on map
 
     //Tony config
-    Tony tony = new Tony("Tony Stark");
-    ArrayList<Equipment> arcList = tony.getEquipments();
+    Tony tony = null;
+    ArrayList<Equipment> arcList = new ArrayList<>();
     Equipment titanium = null;
     Equipment missile = null;
 
     //game control elements & GUI
-    int stepCount = 0; //killed by TenRings if walk too much
+    int stepCount = 0; //battery power run out before find all components
     JButton buttonUp, buttonDown, buttonLeft, buttonRight;
     JButton buttonPickup, buttonCheckBag;
     JTextArea gameArea;
@@ -83,6 +83,12 @@ public class ExploreFrame extends JFrame {
         buttonPickup.setPreferredSize(checkBtnDim);
         checkPanel.add(buttonCheckBag);
         checkPanel.add(buttonPickup);
+        /**add a panel to handle check Panel and control Panel
+         */
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new GridLayout(1,2));
+        bottomPanel.add(controlPanel);
+        bottomPanel.add(checkPanel);
 
         //DONE: set event listener for all buttons
         /** start button events
@@ -98,7 +104,7 @@ public class ExploreFrame extends JFrame {
         buttonPickup.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               //TODO: method to pick equipment
+               pickUpEquipment();
             }
         });
         /** check bag button event
@@ -142,20 +148,18 @@ public class ExploreFrame extends JFrame {
 
         //TODO: config Frame layout
         this.add(gameArea, BorderLayout.NORTH);
-        this.add(controlPanel, BorderLayout.CENTER);
-        this.add(checkPanel,BorderLayout.SOUTH);
+        this.add(bottomPanel,BorderLayout.SOUTH);
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
-    //TODO startPlay
+    //DONE startPlay
     public void startExplore(){
         if(!isStart){
         tony = new Tony("Tony Stark");
         isStart = true;
         isCenter = true;
         description = "\tYou realize the car battery that keep your alive will be completed dry in 10 days. \n";
-        description += "\t" + tony.getStatus();
         description += "\tyou look around the cave, you see there is a dark room on the west side of the cave, a " +
                 "terrorist walk out the dark room with a new rifle that made by your company on his hand. \n";
         description += "\ton the North side, there is huge glass windows and people inside that room could see " +
@@ -170,22 +174,44 @@ public class ExploreFrame extends JFrame {
         }
     }
 
+    public void checkWins(){
+        if (isCenter && (arcList.size() >1 ) ){
+            description = "Tony, you have found all the materials to build the Arc Reactor!";
+            gameArea.setText(description);
+            new CloseWindow("you have built the arc reactor!");
+        }
+
+    }
+
     /**
      * methods in ths sections are control panel section
      */
-    /*
-    public void pickUpEquipment(){
-        if(!isStart){
-            return;
+    public String showEquipments(){
+        StringBuilder stringB = new StringBuilder();
+        for (Equipment items : arcList){
+            stringB.append("\t");
+            stringB.append(items.getName());
+            stringB.append("\n");
         }
+        return stringB.toString();
+    }
+
+
+    public void pickUpEquipment(){
         titanium = new Equipment("Titanium");
         missile = new Equipment("missile");
-        if (isWest && !arcList.contains(titanium)){
+        if(isSouth && isEquipmentExist){
             titanium.setOwner(tony);
             arcList.add(titanium);
-        }else if (isSouth && !arcList.contains(missile)){
+            gameArea.append("\t you have found the titanium to build the container of Arc Reactor");
+            isEquipmentExist = false;
+        }else if(isWest && isEquipmentExist){
             missile.setOwner(tony);
             arcList.add(missile);
+            gameArea.append("\t you have fund the missiles which you could extract palladium for Arc Reactor");
+            isEquipmentExist = false;
+        }else{
+            gameArea.append("\n\tthere is nothing to pick up in this area now");
         }
     }
 
@@ -194,14 +220,11 @@ public class ExploreFrame extends JFrame {
         if(!isStart){
             return;
         }
-        StringBuilder items = new StringBuilder();
-        if (tony.getEquipments().isEmpty()){
-            items.append(tony.getName() + ", your have nothing on you to build the Arc Reactor\n");
-        } else {
-            items.append(tony.getName() + ", you have following items to build Arc Reactor" + arcList.toString() +
-                    "\n");
+        if(arcList.isEmpty()){
+            gameArea.append("\n\t you don't have anything to build Arc Reactor yet..\n");
+        }else {
+            gameArea.append("\n\t you have following items on you: \n" + showEquipments()+ "\n");
         }
-        gameArea.append("\n" + items);
     }
 
     /**
@@ -210,7 +233,7 @@ public class ExploreFrame extends JFrame {
     public void checkCounts(){
         gameArea.append("\n\t your battery is low, the current battery capacity is" + (20 - stepCount));
         if (stepCount > 20){
-            new CloseWindow(" \n the Shrapnel have reached to your heart, you are killed by your own missile");
+            new CloseWindow("the Shrapnel have reached to your heart, you are killed by your own missile");
         }
     }
 
@@ -241,6 +264,9 @@ public class ExploreFrame extends JFrame {
             return;
         }
         checkCounts();
+        if(!arcList.contains(titanium)){
+            isEquipmentExist = true;
+        }
         if(isCenter){
             description = "\n\tyou walk out of the cave. you see some terrorist troops in formation are training to " +
                     "use the weapons built by your company. there is some sheets Metal lay on the ground, looks like " +
@@ -260,6 +286,9 @@ public class ExploreFrame extends JFrame {
             return;
         }
         checkCounts();
+        if (!arcList.contains(missile)) {
+            isEquipmentExist = true;
+        }
         if(isCenter){
             description= "\n\t you walked in the hidden cave seems like the Armory of the TenRings. you see lots of " +
                     "missiles made by your company that contains palladium to power the Arc Reactor. \n";
@@ -304,6 +333,7 @@ public class ExploreFrame extends JFrame {
         isEast = false;
         isCenter = true;
         stepCount++;
+        checkWins();
         gameArea.setText(description);
     }
 
