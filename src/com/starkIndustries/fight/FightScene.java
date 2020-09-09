@@ -1,14 +1,19 @@
 package com.starkIndustries.fight;
 
+import com.starkIndustries.game.CloseWindow;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.util.Random;
 
 public class FightScene extends JFrame {
 
     // variables
+    private JFrame fightFrame = new JFrame();
+
     private JLayeredPane layeredPane;
     private ImageIcon bgImg = new ImageIcon("resources/StartGameBackground.jpg");
 
@@ -39,14 +44,15 @@ public class FightScene extends JFrame {
 
     // generate a window
     public void generateWindow() {
+
         // bring in a layered pane
         layeredPane = makeLayeredPane();
 
         setLayeredPane(layeredPane);
-        setSize(bgImg.getIconWidth(), bgImg.getIconHeight());
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setVisible(true);
-
+        fightFrame.add(layeredPane);
+        fightFrame.setSize(bgImg.getIconWidth(), bgImg.getIconHeight());
+        fightFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        fightFrame.setVisible(true);
     }
 
     // make a layered pane
@@ -131,9 +137,20 @@ public class FightScene extends JFrame {
         result.add(defendBtn);
 
         // add "run away" button
-        JButton runAwayBtn = new JButton("Run Away");
+        JButton runAwayBtn = makeRunAwayButton();
         result.add(runAwayBtn);
 
+        return result;
+    }
+
+    private JButton makeRunAwayButton() {
+        JButton result = new JButton("Run Away");
+        result.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fightFrame.dispatchEvent(new WindowEvent(fightFrame,WindowEvent.WINDOW_CLOSING));
+            }
+        });
         return result;
     }
 
@@ -152,7 +169,26 @@ public class FightScene extends JFrame {
                 enemyHP.setText("Enemy's health: " + npc.getHp() + "\n");
                 // enemy defends or enemy can run away here...
                 String enemyResponse = generateEnemyDecision("fight");
-                fightDescription.setText(enemyResponse);
+                fightDescription.setText(enemyResponse + "\n");
+
+                // what happens if the enemy runs away?
+                    // tony's health increases
+                if (enemyResponse.contains("runs")) {
+                    System.out.println("Enemy runs");
+                    tonyStark.setHp(tonyStark.getHp() + 10);
+                    fightDescription.append("Tony's health has improved!\nClick \"Run Away\" button to leave");
+                    tonyHP.setText("Tony's health: " + tonyStark.getHp());
+
+                    // window closes
+                    System.out.println("WinDOW CLOSING");
+                    result.setVisible(false);
+                }
+
+
+                // what happens if the enemy defends?
+                else if (enemyResponse.contains("defend")) {
+                    System.out.println("enemy choose to defend");
+                }
 
 //                npc.attack(tonyStark);
 //                tonyHP.setText("Tony's health: " + tonyStark.getHp() + "\n");
@@ -172,6 +208,7 @@ public class FightScene extends JFrame {
                     int c = new Random().nextBoolean() ? a : b;
                     if (c == 1) {
                         result = "Enemy chooses to defend.\n";
+                        npc.defend(tonyStark);
                     } else {
                         result = "Enemy runs away!\n";
                     }

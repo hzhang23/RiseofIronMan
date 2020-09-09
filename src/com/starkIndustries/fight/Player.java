@@ -17,16 +17,24 @@ public class Player {
     }
 
     public void attack(Player npc){
-        double hurt = Math.random()*(attackUpper - attackLower) + attackLower;
-        if (hurt <= npc.armor){
-            hurt = 0;
+        double hurtPoints = Math.random()*(attackUpper - attackLower) + attackLower;
+        if (hurtPoints <= npc.armor){
+            hurtPoints = 0;
         }else {
-            hurt -= npc.armor;
+            hurtPoints -= npc.armor;
         }
-        npc.hp -= hurt;
-        System.out.println(name + " cause " + npc.name + " lose " + hurt + " hp");
+        npc.hp -= hurtPoints;
+        System.out.println(name + " cause " + npc.name + " lose " + hurtPoints + " hp");
         System.out.println(name + " current hp is " + this.getHp());
         System.out.println(npc.name + " current hp is " + npc.getHp());
+    }
+
+    public void defend(Player npc) {
+        double defensePoints = this.getArmor()/2;
+        System.out.println("defensePoints is " + defensePoints);
+        System.out.println("HP before points added: " + this.getHp());
+        this.hp += defensePoints;
+        System.out.println("HP after points added: " + this.getHp());
     }
 
     public boolean isLiving(Player npc){
