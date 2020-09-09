@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class FightScene extends JFrame {
 
@@ -148,10 +149,13 @@ public class FightScene extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 fightDescription.append("Tony Strikes...\n");
                 tonyStark.attack(npc);
-                fightDescription.append("Enemy's health: " + npc.getHp() + "\n");
-                fightDescription.append("Enemy Strikes...\n");
-                npc.attack(tonyStark);
-                fightDescription.append("Tony's health: " + tonyStark.getHp() + "\n");
+                enemyHP.setText("Enemy's health: " + npc.getHp() + "\n");
+                // enemy defends or enemy can run away here...
+                String enemyResponse = generateEnemyDecision("fight");
+                fightDescription.setText(enemyResponse);
+
+//                npc.attack(tonyStark);
+//                tonyHP.setText("Tony's health: " + tonyStark.getHp() + "\n");
                 if (tonyStark.getHp() < 0) {
                     fightDescription.append("Tony dies...\n");
                 }
@@ -159,6 +163,22 @@ public class FightScene extends JFrame {
                     fightDescription.append("Tony's health is low... sure you want to keep fighting?\n");
                 }
             }
+
+            private String generateEnemyDecision(String decision) {
+                String result = new String();
+                if (decision.equals("fight")) {
+                    int a = 1;
+                    int b = 2;
+                    int c = new Random().nextBoolean() ? a : b;
+                    if (c == 1) {
+                        result = "Enemy chooses to defend.\n";
+                    } else {
+                        result = "Enemy runs away!\n";
+                    }
+                }
+                return result;
+            }
+
         });
         return result;
     }
@@ -175,7 +195,7 @@ public class FightScene extends JFrame {
         result.setEditable(false);
         result.setOpaque(true);
         result.setBackground(Color.MAGENTA);
-
+        result.setText("What would you choose to do?\n");
         return result;
     }
 
