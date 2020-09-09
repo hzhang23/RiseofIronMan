@@ -19,6 +19,8 @@ public class FightScene extends JFrame {
     private JLabel enemyLabel;
 
     private JTextArea fightDescription;
+    private JTextArea tonyHP;
+    private JTextArea enemyHP;
 
     private TonyStark tonyStark;
     private Player npc;
@@ -65,6 +67,12 @@ public class FightScene extends JFrame {
         // bring in fight description box
         fightDescription = makeFightDescription();
 
+        // bring in health bar for Tony
+        tonyHP = makeTonyHealthStatus();
+
+        // bring in health bar for Enemy
+        enemyHP = makeEnemyHealthStatus();
+
         // bring in a scrollable panel
         JScrollPane scroll = new JScrollPane(fightDescription);
         scroll.setBounds(100, 370, 700, 280);
@@ -76,6 +84,32 @@ public class FightScene extends JFrame {
         result.add(tonyLabel, JLayeredPane.MODAL_LAYER);
         result.add(enemyLabel, JLayeredPane.MODAL_LAYER);
         result.add(scroll, JLayeredPane.MODAL_LAYER);
+        result.add(tonyHP, JLayeredPane.POPUP_LAYER);
+        result.add(enemyHP, JLayeredPane.POPUP_LAYER);
+        return result;
+    }
+
+    private JTextArea makeEnemyHealthStatus() {
+        JTextArea result = new JTextArea();
+        result.setBounds(1000, 300, 300, 50);
+        result.setOpaque(true);
+        result.setBackground(Color.pink);
+        result.setWrapStyleWord(true);
+        result.setLineWrap(true);
+        result.setEditable(false);
+        result.append("Enemy's health: " + npc.getHp().toString() + "\n");
+        return result;
+    }
+
+    private JTextArea makeTonyHealthStatus() {
+        JTextArea result = new JTextArea();
+        result.setBounds(100, 300, 300, 50);
+        result.setOpaque(true);
+        result.setBackground(Color.pink);
+        result.setWrapStyleWord(true);
+        result.setLineWrap(true);
+        result.setEditable(false);
+        result.append("Tony's health: " + tonyStark.getHp().toString() + "\n");
         return result;
     }
 
@@ -141,9 +175,6 @@ public class FightScene extends JFrame {
         result.setEditable(false);
         result.setOpaque(true);
         result.setBackground(Color.MAGENTA);
-        result.setText("You have chosen to fight...\n");
-        result.append("Tony's health: " + tonyStark.getHp().toString() + "\n");
-        result.append("Enemy's health: " + npc.getHp().toString() + "\n");
 
         return result;
     }
