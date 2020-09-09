@@ -21,7 +21,18 @@ public class FightScene extends JFrame {
     private JTextArea fightDescription;
 
     private TonyStark tonyStark;
-    private NPC npc;
+    private Player npc;
+
+
+    // constructor
+    public FightScene(String scene) {
+        if (scene.equals("3")){
+            tonyStark = new TonyStark("Tony Stark", 20, 20, 10, 5, false);
+        } else {
+            tonyStark = new TonyStark("Tony Stark", 80, 90, 10, 80, true);
+        }
+        npc = new Player ("Guard", 50, 30, 20, 10);
+    }
 
     // generate a window
     public void generateWindow() {
@@ -32,6 +43,7 @@ public class FightScene extends JFrame {
         setSize(bgImg.getIconWidth(), bgImg.getIconHeight());
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
+
     }
 
     // make a layered pane
@@ -53,12 +65,17 @@ public class FightScene extends JFrame {
         // bring in fight description box
         fightDescription = makeFightDescription();
 
+        // bring in a scrollable panel
+        JScrollPane scroll = new JScrollPane(fightDescription);
+        scroll.setBounds(100, 370, 700, 280);
+        scroll.setOpaque(true);
+
         // "assemble" the layered pane
         result.add(bgPanel, JLayeredPane.DEFAULT_LAYER);
         result.add(buttonsPanel, JLayeredPane.MODAL_LAYER);
         result.add(tonyLabel, JLayeredPane.MODAL_LAYER);
         result.add(enemyLabel, JLayeredPane.MODAL_LAYER);
-        result.add(fightDescription, JLayeredPane.MODAL_LAYER);
+        result.add(scroll, JLayeredPane.MODAL_LAYER);
         return result;
     }
 
@@ -86,24 +103,25 @@ public class FightScene extends JFrame {
         result.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Player tonyStark = new Player("Tony Stark", 10, 20, 10, 5);
-                Player guard = new Player ("Guard", 100, 80, 60, 10);
-                while (tonyStark.isLiving(guard)){
-                    fightDescription.append("Tony Strikes...\n");
-                    tonyStark.attack(guard);
-                    fightDescription.append("Tony's health: " + tonyStark.getHp() + "\n");
-                    fightDescription.append("Enemy Strikes...\n");
-                    guard.attack(tonyStark);
-                    fightDescription.append("Enemy's health: " + guard.getHp() + "\n");
+                fightDescription.append("Tony Strikes...\n");
+                tonyStark.attack(npc);
+                fightDescription.append("Enemy's health: " + npc.getHp() + "\n");
+                fightDescription.append("Enemy Strikes...\n");
+                npc.attack(tonyStark);
+                fightDescription.append("Tony's health: " + tonyStark.getHp() + "\n");
+                if (tonyStark.getHp() < 0) {
+                    fightDescription.append("Tony dies...\n");
                 }
-
+                else if (tonyStark.getHp() < 5) {
+                    fightDescription.append("Tony's health is low... sure you want to keep fighting?\n");
+                }
             }
         });
         return result;
     }
 
 
-    // make the fight description
+    // make the fight description text area
     public JTextArea makeFightDescription() {
         JTextArea result = new JTextArea();
         Font font = new Font("Anime Ace 2", Font.BOLD, 24);
@@ -115,6 +133,9 @@ public class FightScene extends JFrame {
         result.setOpaque(true);
         result.setBackground(Color.MAGENTA);
         result.setText("You have chosen to fight...\n");
+        result.append("Tony's health: " + tonyStark.getHp().toString() + "\n");
+        result.append("Enemy's health: " + npc.getHp().toString() + "\n");
+
         return result;
     }
 

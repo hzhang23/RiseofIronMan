@@ -101,14 +101,13 @@ public class GameWindow extends JFrame {
                         fightBtn.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
-                                FightScene newScene = new FightScene();
+                                FightScene newScene = new FightScene(scene);
                                 newScene.generateWindow();
                             }
                         });
 
                         fightBtn.setBounds(600, 600, 200, 50);
                         layeredPane.add(fightBtn, JLayeredPane.POPUP_LAYER);
-
                     }
                 }
             }
