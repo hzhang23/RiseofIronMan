@@ -84,17 +84,26 @@ public class FightScene extends JFrame {
         result.setBounds(1000, 370, 300, 280);
         result.setBackground(Color.lightGray);
         result.setOpaque(true);
-        GridLayout myLayout = new GridLayout(2, 1);
+        GridLayout myLayout = new GridLayout(3, 1);
         result.setLayout(myLayout);
 
         // add "fight" button
         JButton fightBtn = makeFightButton();
         result.add(fightBtn);
 
+        // add "defend" button
+        JButton defendBtn = makeDefendButton();
+        result.add(defendBtn);
+
         // add "run away" button
         JButton runAwayBtn = new JButton("Run Away");
         result.add(runAwayBtn);
 
+        return result;
+    }
+
+    private JButton makeDefendButton() {
+        JButton result = new JButton("Defend");
         return result;
     }
 
@@ -168,9 +177,6 @@ public class FightScene extends JFrame {
         result.setBounds(1000, 100, 300, 200);
         result.setBackground(Color.RED);
         result.setOpaque(true);
-
         return result;
     }
-
-
 }
