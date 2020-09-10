@@ -1,6 +1,7 @@
 package com.starkIndustries.explore;
 
 import com.starkIndustries.game.CloseWindow;
+import com.starkIndustries.game.GameWindow;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,7 +42,9 @@ public class ExploreFrame extends JFrame {
     public ExploreFrame(){
         /** welcome Text show
          */
+        Font font = new Font("Anime Ace 2", Font.BOLD, 24);
         gameArea = new JTextArea();
+        gameArea.setFont(font);
         gameArea.setEditable(false);
         gameArea.setPreferredSize(new Dimension(800,350));
         gameArea.setLineWrap(true);
@@ -150,7 +153,8 @@ public class ExploreFrame extends JFrame {
         this.add(gameArea, BorderLayout.NORTH);
         this.add(bottomPanel,BorderLayout.SOUTH);
         this.setVisible(true);
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setSize(1400,700);
+        this.setLocationRelativeTo(null);
     }
 
     //DONE startPlay
@@ -159,13 +163,13 @@ public class ExploreFrame extends JFrame {
         tony = new Tony("Tony Stark");
         isStart = true;
         isCenter = true;
-        description = "\tYou realize the car battery that keep your alive will be completed dry in 10 days. \n";
-        description += "\tyou look around the cave, you see there is a dark room on the west side of the cave, a " +
+        description = "You realize the car battery that keep your alive will be completed dry in 10 days. \n";
+        description += "you look around the cave, you see there is a dark room on the west side of the cave, a " +
                 "terrorist walk out the dark room with a new rifle that made by your company on his hand. \n";
-        description += "\ton the North side, there is huge glass windows and people inside that room could see " +
+        description += "on the North side, there is huge glass windows and people inside that room could see " +
                 "everything about this cave. you could also see several monitors layout in that room. \n";
-        description += "\tthere is also another cave on the East side, you dont know what is it \n";
-        description += "\tyou look South eventually, it is looks bright, seems like the exit of the cave \n";
+        description += "there is also another cave on the East side, you dont know what is it \n";
+        description += "you look South eventually, it is looks bright, seems like the exit of the cave \n";
 
         description += "\t(please choose your direction to move)\n";
         gameArea.setText(description);}
@@ -178,7 +182,10 @@ public class ExploreFrame extends JFrame {
         if (isCenter && (arcList.size() >1 ) ){
             description = "Tony, you have found all the materials to build the Arc Reactor!";
             gameArea.setText(description);
-            new CloseWindow("you have built the arc reactor!");
+            JOptionPane winMsg = new JOptionPane();
+            winMsg.showMessageDialog(this, description,"you win", JOptionPane.PLAIN_MESSAGE);
+            new GameWindow("3");
+            dispose();
         }
 
     }
@@ -230,11 +237,12 @@ public class ExploreFrame extends JFrame {
     /**
      * this method is the fail condition of the the game, TODO: thinking refactor to easy change index
      */
-    public void checkCounts(){
-        gameArea.append("\n\t your battery is low, the current battery capacity is" + (20 - stepCount));
-        if (stepCount > 20){
-            new CloseWindow("the Shrapnel have reached to your heart, you are killed by your own missile");
+    public String checkCounts(){
+        if (stepCount > 10){
+            JOptionPane.showMessageDialog(null,"the sharpnel has reached to your heart","YOU DIE!",JOptionPane.WARNING_MESSAGE);
+            new GameWindow("fail");
         }
+        return ("\n\t your battery is low, the current battery capacity is: " + (10 - stepCount));
     }
 
     /**
@@ -340,6 +348,7 @@ public class ExploreFrame extends JFrame {
     public void wrongDirectionHandler(){
         description = "\n\tyou are forbidden by Ten Rings to go to this direction from here\n";
         stepCount++;
-        gameArea.append(description);
+        String steps = "\n\t" + checkCounts();
+        gameArea.setText(description + steps);
     }
 }
