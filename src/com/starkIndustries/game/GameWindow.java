@@ -121,6 +121,8 @@ public class GameWindow extends JFrame {
                         String scene2 = "well. why not? I don't want to hook up to a car battery for the rest of my " +
                                 "life";
                         String scene5 = "Yinsen: I will buy some time for you. it was a great time spending with you. live a good life if I never come back!";
+                        String sceneFail = "Game over, you have Died!!";
+                        String scene23 = "I AM IRONMAN!!!";
 
                         for (String line : lines){
                             if (line.equals(scene2)){
@@ -129,7 +131,7 @@ public class GameWindow extends JFrame {
                             }else if(line.equals(scene5)){
                                 new PuzzleFrame();
                                 dispose();
-                            }else{
+                            }else if (line.equals(sceneFail) || line.equals(scene23)){
                                 new CloseWindow("Game Over!");
                             }
                         }
