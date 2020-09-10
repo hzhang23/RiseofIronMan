@@ -28,18 +28,16 @@ public class FightScene extends JFrame {
     private JTextArea tonyHP;
     private JTextArea enemyHP;
 
-    private TonyStark tonyStark;
+    private Player tonyStark;
     private Player npc;
 
 
     // constructor
-    public FightScene(String scene) {
-        if (scene.equals("3")){
-            tonyStark = new TonyStark("Tony Stark", 20, 20, 10, 5, false);
-        } else {
-            tonyStark = new TonyStark("Tony Stark", 80, 90, 10, 80, true);
+    public FightScene(String scene, Player tony, Player enemy) {
+        if (scene.equals("3")) {
+            tonyStark = tony;
+            npc = enemy;
         }
-        npc = new Player ("Guard", 50, 30, 20, 10);
     }
 
     // generate a window
@@ -125,7 +123,7 @@ public class FightScene extends JFrame {
         result.setBounds(1000, 370, 300, 280);
         result.setBackground(Color.lightGray);
         result.setOpaque(true);
-        GridLayout myLayout = new GridLayout(3, 1);
+        GridLayout myLayout = new GridLayout(2, 2);
         result.setLayout(myLayout);
 
         // add "fight" button
@@ -136,11 +134,48 @@ public class FightScene extends JFrame {
         JButton defendBtn = makeDefendButton();
         result.add(defendBtn);
 
+        // add "continue" button
+        JButton continueBtn = makeContinueButton();
+        result.add(continueBtn);
+
         // add "run away" button
         JButton runAwayBtn = makeRunAwayButton();
         result.add(runAwayBtn);
 
         return result;
+    }
+
+    private JButton makeContinueButton() {
+        JButton result = new JButton("Continue");
+        result.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String enemyDecision = generateEnemyDecision("enemy");
+                fightDescription.append(enemyDecision + "\n");
+
+                // if enemy wants to run...
+                if (enemyDecision.contains("runs")) {
+                    handleEnemyRunAway();
+                }
+
+                // if enemy wants to fight...
+                if (enemyDecision.contains("fight")) {
+                    handleEnemyChooseFight();
+                }
+            }
+        });
+        return result;
+    }
+
+    public void handleEnemyChooseFight() {
+        npc.attack(tonyStark);
+        tonyHP.setText("Tony's health: " + tonyStark.getHp());
+    }
+
+    public void handleEnemyRunAway() {
+        tonyStark.setHp(tonyStark.getHp() + 10);
+        fightDescription.append("Tony's health has improved!\nClick \"Run Away\" button to leave\n");
+        tonyHP.setText("Tony's health: " + tonyStark.getHp());
     }
 
     private JButton makeRunAwayButton() {
@@ -161,33 +196,36 @@ public class FightScene extends JFrame {
 
     private JButton makeFightButton() {
         JButton result = new JButton("Fight!");
+
         result.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
+                while (tonyStark.getHp() < 0) {
+
+                }
                 fightDescription.append("Tony Strikes...\n");
                 tonyStark.attack(npc);
                 enemyHP.setText("Enemy's health: " + npc.getHp() + "\n");
                 // enemy defends or enemy can run away here...
                 String enemyResponse = generateEnemyDecision("fight");
-                fightDescription.setText(enemyResponse + "\n");
+                fightDescription.append(enemyResponse + "\n");
 
                 // what happens if the enemy runs away?
                     // tony's health increases
                 if (enemyResponse.contains("runs")) {
-                    System.out.println("Enemy runs");
-                    tonyStark.setHp(tonyStark.getHp() + 10);
-                    fightDescription.append("Tony's health has improved!\nClick \"Run Away\" button to leave");
-                    tonyHP.setText("Tony's health: " + tonyStark.getHp());
+                    handleEnemyRunAway();
 
                     // window closes
                     System.out.println("WinDOW CLOSING");
-                    result.setVisible(false);
+                    result.setEnabled(false);
+//                    result.setVisible(false);
                 }
 
 
                 // what happens if the enemy defends?
                 else if (enemyResponse.contains("defend")) {
-                    System.out.println("enemy choose to defend");
+                    fightDescription.append("Press \"Continue\" button\n");
                 }
 
 //                npc.attack(tonyStark);
@@ -200,23 +238,51 @@ public class FightScene extends JFrame {
                 }
             }
 
-            private String generateEnemyDecision(String decision) {
-                String result = new String();
-                if (decision.equals("fight")) {
-                    int a = 1;
-                    int b = 2;
-                    int c = new Random().nextBoolean() ? a : b;
-                    if (c == 1) {
-                        result = "Enemy chooses to defend.\n";
-                        npc.defend(tonyStark);
-                    } else {
-                        result = "Enemy runs away!\n";
-                    }
-                }
-                return result;
-            }
+//            public String generateEnemyDecision(String decision) {
+//                String result = new String();
+//                if (decision.equals("fight")) {
+//                    int a = 1;
+//                    int b = 2;
+//                    int c = new Random().nextBoolean() ? a : b;
+//                    if (c == 1) {
+//                        result = "Enemy chooses to defend.\n";
+//                        npc.defend(tonyStark);
+//                    } else {
+//                        result = "Enemy runs away!\n";
+//                    }
+//                }
+//                return result;
+//            }
 
         });
+        return result;
+    }
+
+    public String generateEnemyDecision(String decision) {
+        String result = new String();
+        if (decision.equals("fight")) {
+            int a = 1;
+            int b = 2;
+            int c = new Random().nextBoolean() ? a : b;
+            if (c == 1) {
+                result = "Enemy chooses to defend.\n";
+                npc.defend(tonyStark);
+            } else {
+                result = "Enemy runs away!\n";
+            }
+        } else {
+            int[] intArray = {1, 2, 3};
+            int idx = new Random().nextInt(intArray.length);
+            if (intArray[idx] == 1) {
+                result = "Enemy chooses to fight!\n";
+            }
+            else if (intArray[idx] == 2) {
+                result = "Enemy chooses to defend.\n";
+            }
+            else {
+                result = "Enemy runs away!\n";
+            }
+        }
         return result;
     }
 

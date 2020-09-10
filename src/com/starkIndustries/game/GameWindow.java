@@ -47,6 +47,11 @@ public class GameWindow extends JFrame {
         chatArea.setText(lines.get(0));
         layeredPane.add(chatArea,JLayeredPane.MODAL_LAYER);
 
+        // adding the characters
+
+        Player tonyStark = new TonyStark("Tony Stark", 20, 20, 10, 5, false);
+        Player npc = new Player ("Guard", 50, 30, 20, 10);
+
         //add nextBtn
         JButton nextBtn = new JButton("Continue");
         nextBtn.setBounds(1050, 470,150,180);
@@ -101,7 +106,7 @@ public class GameWindow extends JFrame {
                         fightBtn.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
-                                FightScene newScene = new FightScene(scene);
+                                FightScene newScene = new FightScene(scene, tonyStark, npc);
                                 newScene.generateWindow();
                             }
                         });
