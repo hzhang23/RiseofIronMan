@@ -27,8 +27,4 @@ public class TonyStark extends Player {
     public void setSuitComplete(boolean suitComplete) {
         isSuitComplete = suitComplete;
     }
-
-    public static void main(String[] args) {
-        Player tonyStark = new TonyStark("Tony Stark", 10, 20, 10, 5, false);
-    }
 }

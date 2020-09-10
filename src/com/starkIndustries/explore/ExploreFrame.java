@@ -33,12 +33,7 @@ public class ExploreFrame extends JFrame {
     JTextArea gameArea;
     String description;
 
-    //TODO: game running, remove after refactor
-    public static void main(String[] args) {
-        new ExploreFrame();
-    }
-
-    //TODO: MainFrame set up
+    //DONE: MainFrame set up
     public ExploreFrame(){
         /** welcome Text show
          */
