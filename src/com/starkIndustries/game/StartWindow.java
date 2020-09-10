@@ -32,7 +32,8 @@ public class StartWindow extends JFrame {
       startBtn.addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {
-//              new MainWindow("0");
+              new GameWindow("0");
+              dispose();
           }
       });
       resumeBtn = new JButton("Resume Game");

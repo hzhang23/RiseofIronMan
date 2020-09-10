@@ -6,10 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CloseWindow extends JFrame {
+
+    JButton yesBtn;
+    JButton noBtn;
+
     public CloseWindow (String message){
         JLabel exitlabel = new JLabel(message);
-        JButton yesBtn = new JButton("Yes");
-        JButton noBtn = new JButton("No");
+        yesBtn = new JButton("Yes");
+        noBtn = new JButton("No");
         noBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

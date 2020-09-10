@@ -1,9 +1,9 @@
 package com.starkIndustries.game;
 
 import com.google.gson.JsonObject;
+import com.starkIndustries.explore.ExploreFrame;
 import com.starkIndustries.fight.FightScene;
-import com.starkIndustries.fight.Player;
-import com.starkIndustries.fight.TonyStark;
+import com.starkIndustries.puzzleGame.PuzzleFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +19,7 @@ public class GameWindow extends JFrame {
 
     public GameWindow(String scene) {
         //load JSON file
-        JsonObject myStory = StoryTeller.getStory(new File("resources/story.json"));
+        JsonObject myStory = StoryTeller.getStory(new File("resources/demo.json"));
         JsonObject thisScene = myStory.get(scene).getAsJsonObject();
         String scenePicPath = thisScene.get("img").getAsString();
         ArrayList<String> lines = getListStrFromJson(myStory, scene);
@@ -61,55 +61,73 @@ public class GameWindow extends JFrame {
                     chatArea.setText(lines.get(i));
                     i++;
                 } else {
-                    String playerVoice = thisScene.get("Player").getAsJsonObject().get("voice").getAsString();
-                    chatArea.setText(playerVoice);
+                    try{ String playerVoice = thisScene.get("Player").getAsJsonObject().get("voice").getAsString();
+                        chatArea.setText(playerVoice);
 
-                    // Adding "Choice A" Button
-                    JButton ABtn = new JButton("A");
-                    ABtn.addActionListener(new ActionListener() {
-                        String nextScene =
-                                thisScene.get("Player").getAsJsonObject()
-                                        .get("reply").getAsJsonObject().get("A").getAsString();
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            new GameWindow(nextScene);
-                            dispose();
-                        }
-                    });
-                    ABtn.setBounds(300, 600, 100, 50);
-                    layeredPane.add(ABtn,JLayeredPane.POPUP_LAYER);
-
-                    // Adding "Choice B" Button
-                    JButton BBtn = new JButton("B");
-                    BBtn.addActionListener(new ActionListener() {
-                        String nextScene =
-                                thisScene.get("Player").getAsJsonObject()
-                                        .get("reply").getAsJsonObject().get("B").getAsString();
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            new GameWindow(nextScene);
-                            dispose();
-                        }
-                    });
-                    BBtn.setBounds(450, 600, 100, 50);
-                    layeredPane.add(BBtn,JLayeredPane.POPUP_LAYER);
-
-                    // Adding "Fight" Button
-                    if (scene.equals("3")) {
-                        JButton fightBtn = new JButton("Fight the Enemy");
-
-                        fightBtn.addActionListener(new ActionListener() {
+                        // Adding "Choice A" Button
+                        JButton ABtn = new JButton("A");
+                        ABtn.addActionListener(new ActionListener() {
+                            String nextScene =
+                                    thisScene.get("Player").getAsJsonObject()
+                                            .get("reply").getAsJsonObject().get("A").getAsString();
                             @Override
                             public void actionPerformed(ActionEvent e) {
-                                FightScene newScene = new FightScene();
-                                newScene.generateWindow();
+                                new GameWindow(nextScene);
+                                dispose();
                             }
                         });
+                        ABtn.setBounds(300, 600, 100, 50);
+                        layeredPane.add(ABtn,JLayeredPane.POPUP_LAYER);
 
-                        fightBtn.setBounds(600, 600, 200, 50);
-                        layeredPane.add(fightBtn, JLayeredPane.POPUP_LAYER);
+                        // Adding "Choice B" Button
+                        JButton BBtn = new JButton("B");
+                        BBtn.addActionListener(new ActionListener() {
+                            String nextScene =
+                                    thisScene.get("Player").getAsJsonObject()
+                                            .get("reply").getAsJsonObject().get("B").getAsString();
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                new GameWindow(nextScene);
+                                dispose();
+                            }
+                        });
+                        BBtn.setBounds(450, 600, 100, 50);
+                        layeredPane.add(BBtn,JLayeredPane.POPUP_LAYER);
 
+                        // Adding "Fight" Button
+                        if (scene.equals("3")) {
+                            JButton fightBtn = new JButton("Fight the Enemy");
+
+                            fightBtn.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+                                    FightScene newScene = new FightScene();
+                                    newScene.generateWindow();
+                                }
+                            });
+
+                            fightBtn.setBounds(600, 600, 200, 50);
+                            layeredPane.add(fightBtn, JLayeredPane.POPUP_LAYER);
+
+                        }}
+                    catch (NullPointerException excep){
+                        String scene2 = "well. why not? I don't want to hook up to a car battery for the rest of my " +
+                                "life";
+                        String scene5 = "Yinsen is fight the terrorists and you need to hurry up assembling the suit";
+
+                        for (String line : lines){
+                            if (line.equals(scene2)){
+                                new ExploreFrame();
+                                dispose();
+                            }else if(line.equals(scene5)){
+                                new PuzzleFrame();
+                                dispose();
+                            }else{
+                                dispose();
+                            }
+                        }
                     }
+
                 }
             }
         });
@@ -150,6 +168,6 @@ public class GameWindow extends JFrame {
     }
 
     public static void main(String[] args) {
-        new GameWindow("3");
+        new GameWindow("0");
     }
 }

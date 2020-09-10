@@ -37,6 +37,7 @@ public class GameFileWindow extends JFrame {
         this.setSize(bgImg.getIconWidth(), bgImg.getIconHeight());
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setVisible(true);
+        this.setLocationRelativeTo(null);
     }
 
     // make a layered pane

@@ -151,5 +151,8 @@ public class FightScene extends JFrame {
         return result;
     }
 
+    public static void main(String[] args) {
+        new FightScene().generateWindow();
+    }
 
 }
