@@ -7,6 +7,8 @@ import com.google.gson.JsonParser;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -37,6 +39,7 @@ public class GameFileWindow extends JFrame {
         this.setSize(bgImg.getIconWidth(), bgImg.getIconHeight());
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setVisible(true);
+        this.setLocationRelativeTo(null);
     }
 
     // make a layered pane
@@ -85,6 +88,21 @@ public class GameFileWindow extends JFrame {
         for (JButton button : buttonsList) {
             button = new JButton(button.getText());
             button.setSize(100, 100);
+            JButton finalButton = button;
+            button.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+                        JsonElement gameFile = JsonParser.parseReader(new FileReader("resources/gameFile.json"));
+                        JsonObject gameFileObj = gameFile.getAsJsonObject();
+                        String scene = gameFileObj.get(finalButton.getText()).getAsString();
+                        new GameWindow(scene);
+                    } catch (FileNotFoundException ex) {
+                        ex.printStackTrace();
+                    }
+
+                }
+            });
             result.add(button);
         }
         return result;
