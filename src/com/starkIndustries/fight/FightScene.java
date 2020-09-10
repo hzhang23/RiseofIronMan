@@ -1,6 +1,7 @@
 package com.starkIndustries.fight;
 
 import com.starkIndustries.game.CloseWindow;
+import com.starkIndustries.game.GameWindow;
 
 import javax.swing.*;
 import java.awt.*;
@@ -170,6 +171,15 @@ public class FightScene extends JFrame {
     public void handleEnemyChooseFight() {
         npc.attack(tonyStark);
         tonyHP.setText("Tony's health: " + tonyStark.getHp());
+        if (tonyStark.getHp() < 0) {
+            handleTonyDeath();
+        }
+    }
+
+    public void handleTonyDeath() {
+        fightDescription.append("Tony dies...\n");
+        new GameWindow("fail");
+        dispose();
     }
 
     public void handleEnemyRunAway() {
@@ -231,7 +241,7 @@ public class FightScene extends JFrame {
 //                npc.attack(tonyStark);
 //                tonyHP.setText("Tony's health: " + tonyStark.getHp() + "\n");
                 if (tonyStark.getHp() < 0) {
-                    fightDescription.append("Tony dies...\n");
+                    handleTonyDeath();
                 }
                 else if (tonyStark.getHp() < 5) {
                     fightDescription.append("Tony's health is low... sure you want to keep fighting?\n");
