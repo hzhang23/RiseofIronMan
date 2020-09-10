@@ -3,6 +3,8 @@ package com.starkIndustries.game;
 import com.google.gson.JsonObject;
 import com.starkIndustries.explore.ExploreFrame;
 import com.starkIndustries.fight.FightScene;
+import com.starkIndustries.fight.Player;
+import com.starkIndustries.fight.TonyStark;
 import com.starkIndustries.puzzleGame.PuzzleFrame;
 
 import javax.swing.*;
@@ -46,6 +48,11 @@ public class GameWindow extends JFrame {
         chatArea.setBackground(Color.ORANGE);
         chatArea.setText(lines.get(0));
         layeredPane.add(chatArea,JLayeredPane.MODAL_LAYER);
+
+        // adding the characters
+
+        Player tonyStark = new TonyStark("Tony Stark", 20, 20, 10, 5, false);
+        Player npc = new Player ("Guard", 50, 30, 20, 10);
 
         //add nextBtn
         JButton nextBtn = new JButton("Continue");
@@ -101,7 +108,7 @@ public class GameWindow extends JFrame {
                             fightBtn.addActionListener(new ActionListener() {
                                 @Override
                                 public void actionPerformed(ActionEvent e) {
-                                    FightScene newScene = new FightScene();
+                                    FightScene newScene = new FightScene(scene, tonyStark, npc);
                                     newScene.generateWindow();
                                 }
                             });

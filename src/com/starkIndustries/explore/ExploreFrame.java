@@ -115,7 +115,7 @@ public class ExploreFrame extends JFrame {
         buttonCheckBag.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                viewBag(tony);
+//                viewBag(tony);
             }
         });
 
