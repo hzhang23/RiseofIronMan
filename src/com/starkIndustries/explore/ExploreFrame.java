@@ -202,12 +202,12 @@ public class ExploreFrame extends JFrame {
     public void pickUpEquipment(){
         titanium = new Equipment("Titanium");
         missile = new Equipment("missile");
-        if(isSouth && isEquipmentExist){
+        if(isSouth && isEquipmentExist && !arcList.contains(titanium)){
             titanium.setOwner(tony);
             arcList.add(titanium);
             gameArea.append("\t you have found the titanium to build the container of Arc Reactor");
             isEquipmentExist = false;
-        }else if(isWest && isEquipmentExist){
+        }else if(isWest && isEquipmentExist && !arcList.contains(missile)){
             missile.setOwner(tony);
             arcList.add(missile);
             gameArea.append("\t you have fund the missiles which you could extract palladium for Arc Reactor");
