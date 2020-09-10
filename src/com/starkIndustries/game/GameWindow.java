@@ -113,7 +113,7 @@ public class GameWindow extends JFrame {
                     catch (NullPointerException excep){
                         String scene2 = "well. why not? I don't want to hook up to a car battery for the rest of my " +
                                 "life";
-                        String scene5 = "Yinsen is fight the terrorists and you need to hurry up assembling the suit";
+                        String scene5 = "Yinsen: I will buy some time for you. it was a great time spending with you. live a good life if I never come back!";
 
                         for (String line : lines){
                             if (line.equals(scene2)){
@@ -123,7 +123,7 @@ public class GameWindow extends JFrame {
                                 new PuzzleFrame();
                                 dispose();
                             }else{
-                                dispose();
+                                new CloseWindow("Game Over!");
                             }
                         }
                     }
@@ -168,6 +168,6 @@ public class GameWindow extends JFrame {
     }
 
     public static void main(String[] args) {
-        new GameWindow("0");
+        new GameWindow("6");
     }
 }

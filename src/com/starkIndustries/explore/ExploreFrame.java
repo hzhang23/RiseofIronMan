@@ -238,11 +238,11 @@ public class ExploreFrame extends JFrame {
      * this method is the fail condition of the the game, TODO: thinking refactor to easy change index
      */
     public String checkCounts(){
-        if (stepCount > 20){
+        if (stepCount > 10){
             JOptionPane.showMessageDialog(null,"the sharpnel has reached to your heart","YOU DIE!",JOptionPane.WARNING_MESSAGE);
             new GameWindow("fail");
         }
-        return ("\n\t your battery is low, the current battery capacity is" + (20 - stepCount));
+        return ("\n\t your battery is low, the current battery capacity is: " + (10 - stepCount));
     }
 
     /**

@@ -43,7 +43,7 @@ public class PuzzleFrame extends JFrame {
                 if(!gamepane.IsWin()){
                     return;
                 }else{
-                    timer.stop();
+                    timer.interrupt();
                     JOptionPane.showMessageDialog(null, "Iron Man Suit Equiped, ready to fight!","completion the " +
                             "suit!", JOptionPane.PLAIN_MESSAGE);
                     new GameWindow("23");
@@ -74,6 +74,7 @@ public class PuzzleFrame extends JFrame {
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                    break;
                 }
                 if (t <1) {
                     JOptionPane.showMessageDialog(null, "Raza break the door and shoot at you", "YOU DIE!",
