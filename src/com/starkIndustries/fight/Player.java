@@ -45,21 +45,6 @@ public class Player {
         return true;
     }
 
-    public static void main(String[] args) {
-        Player tonyStark = new Player("Tony Stark", 50, 20, 10, 5);
-        Player raza = new Player ("Raza", 100, 10, 5, 10);
-        while (true){
-            tonyStark.attack(raza);
-            if(!raza.isLiving(tonyStark)){
-                break;
-            }
-            raza.attack(tonyStark);
-            if(!tonyStark.isLiving(raza)){
-                break;
-            }
-        }
-    }
-
     //getter&setter
     public String getName() {
         return name;

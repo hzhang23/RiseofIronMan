@@ -86,9 +86,4 @@ public class CloseWindow extends JFrame {
         }
         System.exit(0);
     }
-
-    public static void main(String[] args) {
-        new CloseWindow("Do you want to save the game before leave?");
-
-    }
 }

@@ -175,8 +175,4 @@ public class GameWindow extends JFrame {
         bgPanel.add(bgLabel);
         return bgPanel;
     }
-
-    public static void main(String[] args) {
-        new GameWindow("6");
-    }
 }

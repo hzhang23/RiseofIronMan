@@ -33,36 +33,32 @@ public class MainWindow extends JFrame {
                 refreshWindow();
             }
         });
-        startBtn.setPreferredSize(new Dimension(200,100));
+        startBtn.setPreferredSize(new Dimension(200, 100));
         newP.setBounds(new Rectangle(400, 200));
         newP.setOpaque(false);
         newP.add(startBtn);
         newP.add(resumeBtn);
-        newP.setLayout(new GridLayout(3,3));
+        newP.setLayout(new GridLayout(3, 3));
         bgPanel.add(newP);
         bgPanel.setLayout(new GridBagLayout());
     }
 
-        public void initFrame () {
-            this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-            this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-            this.setVisible(true);
-            this.setLocationRelativeTo(null);
-            this.addWindowListener(new WindowAdapter() {
-                @Override
-                public void windowClosing(WindowEvent e) {
-                    new CloseWindow("Thanks for Playing Rise of IronMan");
-                }
-            });
+    public void initFrame() {
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                new CloseWindow("Thanks for Playing Rise of IronMan");
+            }
+        });
 
-        }
+    }
 
-        public void refreshWindow () {
-            bgPanel.removeAll();
-            bgPanel.repaint();
-        }
-
-    public static void main(String[] args) {
-        new MainWindow();
+    public void refreshWindow() {
+        bgPanel.removeAll();
+        bgPanel.repaint();
     }
 }
