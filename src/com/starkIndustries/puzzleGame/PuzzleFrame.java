@@ -31,7 +31,8 @@ public class PuzzleFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 gamepane.OutOfOrder();
-                timer.setT(15);
+                timer.interrupt();
+                timer.setT(100);
                 timer.start();
             }
         });
